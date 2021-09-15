@@ -1,0 +1,26 @@
+<div class="navigation">
+    <div class="images-medias">
+        <img class="nav-image" src="../../../assets/img/moi.jpeg" alt="image de Samuel Mandeng"/>
+        <span class="name">Samuel Mandeng</span>
+        <div class="medias">
+            <img src="../../../assets/img/linkedin.png" alt="logo of linkedin" >
+            <img src="../../../assets/img/instagram.png" alt="logo of instagram">
+            <img src="../../../assets/img/github.png" alt="logo of github">
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" routerLink="/accueil" ><fa-icon [icon]="faHome"></fa-icon><span>Accueil</span></a></li>
+            <li><a routerLinkActive="active-link" routerLink="/a-propos"><fa-icon [icon]="faUserAlt"></fa-icon>A Propos</a></li>
+            <li><a routerLinkActive="active-link" routerLink="/sscovid"><fa-icon [icon]="faListAlt"></fa-icon>Services</a></li>
+            <li><a routerLinkActive="active-link" routerLink="/réalisations"><fa-icon [icon]="faSuitcase"></fa-icon>Réalisations</a></li>
+            <li><a routerLinkActive="active-link" routerLink="/contact"><fa-icon [icon]="faEnvelope"></fa-icon>Contactez-moi</a></li>
+        </ul>
+    </nav>
+
+
+    <span class="copyright">
+        © Samuel Mandeng, tous droits réservés
+    </span>
+</div>

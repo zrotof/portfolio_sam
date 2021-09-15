@@ -1,0 +1,98 @@
+.home{
+    margin: 0 0 0 300px;
+    height: 100vh;
+    width: calc(100% - 300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #363636;
+    background-color: #D8D8D8;
+ 
+
+    .greetings{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 2em;
+        font-weight: 330;
+
+        .name{
+            font-weight: 700;
+            margin: 0 0 0 15px;
+        }
+    }
+
+    .work{
+        display: flex;
+        font-size: 1.7em;
+        margin-top: 5px;
+        font-weight: 350;
+        
+        ul{
+            list-style: none;
+            padding-left: 5px;
+            overflow: hidden;
+            line-height: 1.7em;
+            height: 1.7em;          
+
+            li{
+                color:#00CEFF ;
+                position: relative;  
+                top: 0%;
+                animation: slide 8s steps(2) infinite;
+            }
+
+            @keyframes slide {
+                100%{
+                    top:-3.4em;
+                }
+            }
+
+            li::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                background-color: #D8D8D8;
+                width: 100%;
+                height: 100%;
+                border-left: 2px solid #00CEFF;
+                animation: typing 4s steps(14) infinite;
+            }
+
+            
+
+            @keyframes typing {
+                40%,
+                60%{
+                    left: calc(100% + 20px);
+                }
+
+                100%{
+                    left: 0;
+                }
+            }
+        }
+        
+    }
+
+    button{
+        padding: 6px 25px;
+        border-radius: 100px;
+        margin-top: 25px;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1em;
+        background-color: white;
+        box-shadow: 4px 5px 6px -1px #363636;
+
+    }
+
+    button:hover{
+        color: white;
+        background-color: #363636 ;
+        transition: all 0.5s ease 0s;
+    }
+
+}
+

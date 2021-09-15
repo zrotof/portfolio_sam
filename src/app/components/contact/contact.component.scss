@@ -1,0 +1,225 @@
+.contact{
+    margin: 0 0 0 300px;
+    width: calc(100% - 300px);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D8D8D8;
+    color: #363636;
+ 
+    .content{
+        width: 100%;
+        margin: 0 55px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    
+        .title{
+            font-size: 1.9em;
+            font-weight: bold;
+            padding: 30px 0 10px 0;
+            position: relative;
+
+        }
+    
+        .title::before{
+            content: "";
+            position: absolute;
+            width: 5%;
+            height: 1px;
+            bottom:0;
+            border-bottom: 4px solid #00CEFF;
+        }
+
+        .speach{
+            margin: 50px 0;
+            font-size: 1.15em;
+            font-weight: lighter;
+        }
+
+        .contact-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 60px;    
+    
+            .personal-id{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                border-radius: 10px;
+                background-color: #F2F2F2;
+                width: 20%;
+                .tel, .mail{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 20px 0;
+                    align-items: center;
+    
+                    .img-bloc{
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        background-color: #00ccff21;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #00CEFF;
+                        font-size: 1.6em;
+                        margin: 0 0 3px 0;
+                    }
+
+                    .titles{
+                        font-size: 1.4em;
+                        margin: 0 0 3px 0;
+                        font-weight: lighter;
+                    }
+                    .text{
+                        font-weight: 500;
+                        font-size: 0.85em;
+                    }
+                }
+            }
+
+            form{
+                width: 70%;
+                background-color: #F2F2F2;
+                padding: 50px 33px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .name-email{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 40px;
+                    width: 100%;
+
+                    .name-bloc,.email-bloc{
+                        width: 45%;
+                        position: relative;
+                        height: 100%;
+
+                        #name-input, #email-input{
+                            height: 100%;
+                            width: 100%;
+                            border: none;
+                            border-radius: 100px;
+                            padding: 0 20px;
+                            
+                            outline: none;
+                        }
+
+                        #name-input:not(:placeholder-shown) + .label-id,
+                        #email-input:not(:placeholder-shown) + .label-id
+                        {
+                            transform: translate(0, -50%);
+                            opacity: 1;
+                            color: #00CEFF;
+                        }
+
+                        .label-id{
+                            left: 20px;
+                            position: absolute;
+                            top: 0;
+                            opacity: 0;
+                            transition: all 0.2s;
+                        }
+                    }
+
+                    
+                }
+                .objet-bloc{
+                    width: 100%;
+                    height: 40px;
+                    position: relative;
+                    margin-top: 20px;
+
+                    #objet-input{
+                        height: 100%;
+                        width: 100%;
+                        border: none;
+                        border-radius: 100px;
+                        padding: 0 20px;
+                        outline: none;
+                    }
+
+                    #objet-input:not(:placeholder-shown) + .label-id
+                    {
+                        transform: translate(0, -50%);
+                        opacity: 1;
+                        color: #00CEFF;
+                    }
+
+                    .label-id{
+                        left: 20px;
+                        position: absolute;
+                        top: 0;
+                        opacity: 0;
+                        transition: all 0.2s;
+                    }
+                }
+
+                .message-bloc{
+                    width: 100%;
+                    height: 200px;
+                    position: relative;
+                    margin-top: 20px;
+
+                    #message-area{
+                        height: 100%;
+                        width: 100%;
+                        border: none;
+                        border-radius: 10px;
+                        padding: 10px 20px;
+                        outline: none;
+                    }
+
+                    #message-area:not(:placeholder-shown) + .label-id
+                    {
+                        transform: translate(0, -50%);
+                        opacity: 1;
+                        color: #00CEFF;
+                    }
+
+                    .label-id{
+                        left: 20px;
+                        position: absolute;
+                        top: 0;
+                        opacity: 0;
+                        transition: all 0.2s;
+                    }
+                }
+
+
+            }
+
+            button{
+                padding: 7px 25px;
+                border-radius: 100px;
+                margin-top: 30px;
+                border: none;
+                cursor: pointer;
+                font-size: 1em;
+                background-color: white
+
+            }
+
+            button:hover{
+                color: white;
+                background-color: #363636 ;
+                transition: all 0.5s ease 0s;
+        
+            }
+        
+        }
+
+    }
+    
+    
+}

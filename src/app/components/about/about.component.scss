@@ -1,0 +1,331 @@
+.about{
+    margin: 0 0 0 300px;
+    width: calc(100% - 300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D8D8D8;
+    color: #363636;
+
+    .content{
+        width: 100%;
+        margin: 0 55px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    
+        .title{
+            font-size: 1.9em;
+            font-weight: bold;
+            padding: 30px 0 10px 0;
+            position: relative;
+
+        }
+    
+        .title::before{
+            content: "";
+            position: absolute;
+            width: 5%;
+            height: 1px;
+            bottom:0;
+            border-bottom: 4px solid #129BBC;
+        }
+
+        .text-img{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px 0 20px 0;
+
+            .text{
+                display: flex;
+                flex-direction: column;
+                width: 55%;
+                font-size: 1.1em;
+                margin-right: 30px;
+
+                span{
+                    text-align: justify;
+                }
+                span:nth-child(2){
+                    margin-top: 5px;
+                }
+            }
+
+            .image{
+                width: 400px;
+                height: 100%;
+                border-radius: 10px;
+            }
+        }
+
+        .actions{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+
+            button{
+                padding: 7px 25px;
+                border-radius: 100px;
+                margin: 50px 20px 0 20px;
+                border: none;
+                cursor: pointer;
+                font-size: 1em;
+                background-color: white;
+                color:  #363636;
+                box-shadow: 4px 5px 6px -1px #363636;
+
+                fa-icon{
+                    margin-left: 5px;
+                }
+            }
+
+            button:hover{
+                color: white;
+                background-color: #363636 ;
+                transition: all 0.5s ease 0s;
+            }
+        }
+
+        .profil{
+            display: flex;
+            width: 100%;
+            margin: 60px 0 60px 0;
+            justify-content: space-between;
+
+            .others{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0 10px;
+                width: 400px;
+                height: 100%;
+                overflow: hide;
+
+                .formation{
+                    width: 100%;
+                    .header{
+                        font-size: 1.6em;
+                        color:  #129BBC;
+                    }
+                    
+                    .timeline{
+                        width: 100%;
+                        position: relative;
+                        margin-top: 15px;
+                        .timeline-bloc{
+                            display: flex;
+                            flex-direction: column;
+                            position: relative;
+                            
+                            padding: 10px 40px;
+
+                            span{
+
+                                fa-icon{
+                                    margin-right: 5px;
+                                }
+                            }
+
+                            .formation-title{
+                                font-weight: bold;
+                                margin-top: 15px;
+                            }
+
+                            .formation-description{
+                                margin-top: 15px;
+                            }
+
+                        }
+
+                        .timeline-bloc::after {
+                            content: '';
+                            position: absolute;
+                            width: 15px;
+                            height: 15px;
+                            left: 0;
+                            background-color: #129BBC;
+                            top: 10px;
+                            border-radius: 50%;
+                            z-index: 1;
+                          }
+                    }
+
+                    .timeline::after {
+                        content: '';
+                        position: absolute;
+                        width: 3px;
+                        background-color: #129BBC;
+                        top: 10px;
+                        bottom: 0;
+                        left: 6.4px;
+                      }
+                }
+
+                .langues{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 30px 0 30px 0;
+
+                    .header{
+                        font-size: 1.6em;
+                        color:  #129BBC;
+                        margin-bottom: 15px;
+                    }
+
+                    .langue{
+                        margin: 3px 0 3px 40px;
+                    }
+
+                }
+
+                .hobbies{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0px 0 20px 0;
+
+                    .header{
+                        font-size: 1.6em;
+                        color:  #129BBC;
+                        margin-bottom: 15px;
+                    }
+
+                    .hobby{
+                        margin: 3px 0 3px 40px;
+
+                        fa-icon{
+                            margin-right: 5px;
+                            font-size: 1.1em;
+                        }
+                    }
+
+
+                }
+            }
+
+
+
+
+
+
+
+
+            .technos-bloc{
+                width: 55%;
+                background-color: #F2F2F2;
+                padding: 0 20px;
+                margin-right: 30px;
+                border-radius: 5px;
+                height: fit-content;
+
+                .header{
+                    font-size: 1.6em;
+                    color: #129BBC;
+                }
+
+                .technos{
+                    width: 100%;
+                    margin-top: 20px;
+                    .skill {
+                        margin-bottom: 35px;
+                        position: relative;
+                        
+                        p {
+                        font-weight: 400;
+                        color: #363636;
+                        margin: 0;
+                        font-size: 1.1em;
+                        }
+                    }
+                    .skill:before{
+                        width: 100%;
+                        height: 9px;
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        background: #959595;
+                        bottom: 0;
+                        border-radius: 100px;
+                    }
+                    .skill-bar {
+                        width: 100%;
+                        height: 9px;
+                        background:#129BBC;
+                        display: block;
+                        position: relative;
+                        border-radius: 100px;
+                    }
+                
+                    /* SKILL 1 */
+                    .skill1{
+                        width: 80%;
+                            
+                    }
+                    .skill-bar span{
+                        position: absolute;
+                        top: -30px;
+                        padding: 0;
+                        padding: 3px 0;
+                        font-weight: 500;
+                    }
+                    .skill-bar {
+                        position: relative;
+                            
+                    }
+                
+                    .skill1 .skill-count1 {
+                        right: 0;
+                    }
+                    /* SKILL 2 */
+                    .skill2{
+                        width: 70%;
+                    }
+                
+                    .skill2 .skill-count2 {
+                        right: 0;
+                    }
+                    /* SKILL 3 */
+                    .skill3{
+                        width: 75%;
+                    }
+                    .skill3 .skill-count3 {
+                        right: 0;
+                    }
+                
+                    /* SKILL 4 */
+                    .skill4{
+                        width: 85%;
+                    }
+                
+                    .skill4 .skill-count4 {
+                        right: 0;
+                    }
+                
+                    /* SKILL 5 */
+                    .skill5{
+                        width: 80%;
+                    }
+                
+                    .skill5 .skill-count5 {
+                        right: 0;
+                    }
+                
+                    /* SKILL 6 */
+                    .skill6{
+                        width: 70%
+                    }
+                
+                    .skill6 .skill-count6 {
+                        right: 0;
+                    }
+
+                }
+            }
+        }
+    }
+}

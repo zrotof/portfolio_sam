@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: 'Exo';
+    src: url('/src/assets/fonts/exo/Exo2-VariableFont_wght.ttf') format("truetype");
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Exo';
+    
+}
