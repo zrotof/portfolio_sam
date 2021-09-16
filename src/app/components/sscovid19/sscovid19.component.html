@@ -6,8 +6,8 @@
         <div class="description">
             <img src="../../../assets/img/sscovid19_logo.png" alt="Logo of sscovid19 website">
             <span class="description-title">Description</span>
-            <span><strong>SSCOVID19</strong> est une application web multilingue ( anglais, français ) que j'ai créé dans le but de rejoindre activement la lutte contre l'évolution de la covid-19 dans le monde en permettant à la terre entière de rester informée sur l'évolution du virus.</span>
-            <span>Elle prend en compte les données de plus de 215 pays et permet: </span>
+            <span><strong>SSCOVID19</strong> est un projet personnel que j'ai réalisé dans le but de participer activement à la lutte contre la covid-19 dans le monde en permettant à la terre entière de rester informée sur l'évolution du virus.</span>
+            <span>C'est une application web multilingue ( anglais, français ) qui prend en compte les données de plus de 215 pays et permet: </span>
                 <ul>
                     <li>de consulter les chiffres totaux mondiaux</li>
                     <li>de consulter les chiffres par pays et par continent</li>
@@ -20,40 +20,79 @@
         </div>
 
         <div class="organisation">
-            <span class="organisation-title">Organisation</span>
-            <span class="organisation-subtitle">1) Analyse des solutions existantes</span>
-            <div class="organisation-first-step">
-                <span> Je suis parti du principe que je voulais une solution simple et facile d'utilisation. J'ai donc inspecter des applications et sites web qui présentaient également des données sur la pandémie.  </span>
-                <span>Fort a été de constater que:</span>
-                <ul>
-                    <li>Plusieurs sites web mettaient beaucoup plus en avant, les informations des pays originaires des développeurs</li>
-                    <li>Plusieurs d'entre eux présentaient des données qui prennent beaucoup de temps à être chargées</li>
-                    <li>Sur certains, il y avait un affichage massif d'information et des résultats contenant des termes statistiques pas facilement accessibles à un utilisateur lambda</li>
-                </ul>
-                <span>Je me suis donc proposé de développer une solution en prenant en compte les points cités plus haut.</span>
+            <span class="organisation-title">Organisation Du Travail</span>
+
+            <div class="accordions">
+
+                <div class="tab">
+                    <input type="checkbox" id="chck1">
+                    <label class="tab-label" for="chck1">1) Analyse des solutions existantes</label>
+                    <div class="tab-content">
+                        <span> Je suis parti du principe que je voulais une solution simple et facile d'utilisation. J'ai donc inspecter des applications et sites web qui présentaient également des données sur la pandémie.  </span>
+                        <span>Fort a été de constater que:</span>
+                        <ul>
+                            <li>Plusieurs sites web mettaient beaucoup plus en avant, les informations des pays originaires des développeurs</li>
+                            <li>Plusieurs d'entre eux présentaient des données qui prennent beaucoup de temps à être chargées</li>
+                            <li>Sur certains, il y avait un affichage massif d'information et des résultats contenant des termes statistiques pas facilement accessibles à un utilisateur lambda</li>
+                        </ul>
+                        <span>Je me suis donc proposé de développer une solution en prenant en compte les points cités plus haut.</span>
+                    
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <input type="checkbox" id="chck2">
+                    <label class="tab-label" for="chck2">2) Réalisation des maquettes</label>
+                    <div class="tab-content">
+                        <span>J'ai réalisé les interfaces utilisateurs avec Adobe XD</span>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <input type="checkbox" id="chck3">
+                    <label class="tab-label" for="chck3">3) Définition de l'architecture et choix des technologies</label>
+                    <div class="tab-content">
+                        <img src="../../../assets/img/architechture.png" alt="architecture of sscovid19.com"/>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <input type="checkbox" id="chck4">
+                    <label class="tab-label" for="chck4">4) Développement back-end</label>
+                    <div class="tab-content">
+                        <ul>
+                            <li>création et connexion de la base de données</li>
+                            <li>récupération des données brutes de l'API externe desease.sh pour un stockage spécifique </li>
+                            <li>création des endpoints d'exposition de l'API</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <input type="checkbox" id="chck5">
+                    <label class="tab-label" for="chck5">5) Développement Front-end</label>
+                    <div class="tab-content">
+                        <ul>
+                            <li>intégration des maquettes et SEO on page</li>
+                            <li>Responsive design</li>
+                            <li>ajout de google analytics en vue de monitorer le comportement des visiteurs </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <input type="checkbox" id="chck6">
+                    <label class="tab-label" for="chck6">6) Mise en production</label>
+                    <div class="tab-content">
+                        <ul>
+                            <li>hébergement du back-end sur heoku</li>
+                            <li>achat du nom de domaine sscovid19.com</li>
+                            <li>hébergement du front-end sur hostinger</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-            <span class="organisation-subtitle">2) Réalisation des maquettes</span>
-            <span>J'ai réalisé les interfaces utilisateurs avec Adobe XD</span>
-            <span class="organisation-subtitle">3) Définition de l'architecture et choix des technologies</span>
-            <img src="../../../assets/img/architechture.png" alt="architecture of sscovid19.com"/>
-            <span class="organisation-subtitle">4) Développement back-end</span>
-            <ul>
-                <li>création et connexion de la base de données</li>
-                <li>récupération des données brutes de l'API externe desease.sh pour un stockage spécifique </li>
-                <li>création des endpoints d'exposition de l'API</li>
-            </ul>
-            <span class="organisation-subtitle">5) Développement Front-end</span>
-            <ul>
-                <li>intégration des maquettes et SEO on page</li>
-                <li>Responsive design</li>
-                <li>ajout de google analytics en vue de monitorer le comportement des visiteurs </li>
-            </ul>
-            <span class="organisation-subtitle">6) Mise en production</span>
-            <ul>
-                <li>hébergement du back-end sur heoku</li>
-                <li>achat du nom de domaine sscovid19.com</li>
-                <li>hébergement du front-end sur hostinger</li>
-            </ul>
 
         </div>
 

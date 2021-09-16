@@ -1,3 +1,5 @@
+$fontcolor : #363636;
+
 .sscovid{
     margin: 0 0 0 300px;
     min-height: 100vh;
@@ -6,7 +8,7 @@
     justify-content: center;
     align-items: flex-start;
     background-color: #D8D8D8;
-    color:#363636;
+    color: $fontcolor;
 
     .content{
         width: 100%;
@@ -43,6 +45,7 @@
 
             .description-title{
                 margin-bottom: 15px;
+                
                 font-weight: bold;
                 font-size: 1.4em;
             }
@@ -87,6 +90,79 @@
                 font-weight: bold;
                 font-size: 1.4em;
                 margin-top: 40px;
+                margin-bottom: 40px;
+            }
+
+
+
+            .accordions{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                .tab{
+                    width: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    background-color: white;
+                    margin-bottom: 30px;
+                    border-radius: 5px;
+
+                    input{
+                        position: absolute;
+                        display: none;
+                    }
+
+                    .tab-label {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0.5em 1em;
+                        font-weight: 400;
+                        cursor: pointer;
+                        /* Icon */
+                        &:hover {
+                          color: #00CEFF;
+                        }
+                        &::after {
+                          content: "\276F";
+                          width: 1em;
+                          height: 1em;
+                          text-align: center;
+                          transition: all .35s;
+                        }
+                      }
+                      &-content {
+                        max-height: 0;
+                        padding: 0 1em;
+                        color: $fontcolor;
+                        background: white;
+                        transition: all .35s;
+                      }
+                      &-close {
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: 1em;
+                        font-size: 0.75em;
+                        cursor: pointer;
+                   
+                      }
+
+                      input:checked {
+    
+                        + .tab-label {
+                          background: #00CEFF;
+                          color: white;
+                          &::after {
+                            transform: rotate(90deg);
+                          }
+                        }
+                        ~ .tab-content {
+                          max-height: 100vh;
+                          padding: 1em;
+                        }
+                      }
+                }
             }
 
             .organisation-subtitle{
