@@ -401,7 +401,15 @@
 @media all and (max-width: 1012px){
     .about{
         margin: 0 0 0 100px;
-        width: calc(100% - 100px);
+        width: calc(100vw - 100px);
+    }
+
+}
+
+@media all and (max-width: 675px){
+    .about{
+        margin: 0 0 0 60px;
+        width: calc(100vw - 60px);
     }
 
 }

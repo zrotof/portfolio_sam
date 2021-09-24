@@ -205,3 +205,19 @@ $fontcolor : #363636;
 
     }
 }
+
+
+@media all and (max-width: 1012px){
+    .sscovid{
+        margin: 0 0 0 100px;
+        width: calc(100vw - 100px);
+    }
+}
+
+@media all and (max-width: 675px){
+    .sscovid{
+        margin: 0 0 0 60px;
+        width: calc(100vw - 60px);
+    }
+
+}
