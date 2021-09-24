@@ -1,10 +1,10 @@
 .contact{
     margin: 0 0 0 300px;
-    width: calc(100% - 300px);
+    width: calc(100vw - 300px);
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background-color: #D8D8D8;
     color: #363636;
  
@@ -14,28 +14,28 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        color: white;
     
         .title{
             font-size: 1.9em;
             font-weight: bold;
             padding: 30px 0 10px 0;
-            position: relative;
-
+            position:relative;
+            z-index: 1;
         }
     
         .title::before{
             content: "";
             position: absolute;
-            width: 5%;
+            width: 3em;
             height: 1px;
             bottom:0;
-            border-bottom: 4px solid #00CEFF;
+            border-bottom: 4px solid #129BBC;
         }
 
         .speach{
             margin: 50px 0;
-            font-size: 1.15em;
-            font-weight: lighter;
+            font-size: 1.1em;
         }
 
         .contact-info{
@@ -67,7 +67,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        color: #00CEFF;
+                        color: #129BBC;
                         font-size: 1.6em;
                         margin: 0 0 3px 0;
                     }
@@ -120,7 +120,7 @@
                         {
                             transform: translate(0, -50%);
                             opacity: 1;
-                            color: #00CEFF;
+                            color: #129BBC;
                         }
 
                         .label-id{
@@ -153,7 +153,7 @@
                     {
                         transform: translate(0, -50%);
                         opacity: 1;
-                        color: #00CEFF;
+                        color: #129BBC;
                     }
 
                     .label-id{
@@ -178,13 +178,15 @@
                         border-radius: 10px;
                         padding: 10px 20px;
                         outline: none;
+                        resize: none;
+
                     }
 
                     #message-area:not(:placeholder-shown) + .label-id
                     {
                         transform: translate(0, -50%);
                         opacity: 1;
-                        color: #00CEFF;
+                        color: #129BBC;
                     }
 
                     .label-id{
@@ -221,5 +223,55 @@
 
     }
     
-    
 }
+
+@media all and (max-width: 1212px){
+
+    .contact{
+        .content{
+            .contact-info{
+                flex-direction: column;
+                
+                .personal-id{
+                    flex-direction: row;
+                    margin-bottom: 40px;
+                    width: fit-content;
+
+                    .tel, .mail{
+                        
+                        margin: 10px 30px;
+
+                        .titles{
+                            font-size: 1.2em;
+                            margin: 0 0 3px 0;
+                            font-weight: lighter;
+                        }
+                        .text{
+                            font-weight: 400;
+                            font-size: 0.9em;
+                        }
+                    }
+        
+                }
+
+                form{
+                    width: 100%;
+                }
+            }
+        
+          
+        }
+    }
+    
+
+}
+
+
+@media all and (max-width: 1012px){
+    .contact{
+        margin: 0 0 0 100px;
+        width: calc(100vw - 100px);
+    }
+
+}
+

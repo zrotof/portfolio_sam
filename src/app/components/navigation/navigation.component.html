@@ -1,4 +1,5 @@
 <div class="navigation">
+
     <div class="images-medias">
         <img class="nav-image" src="../../../assets/img/moi.jpeg" alt="image de Samuel Mandeng"/>
         <span class="name">Samuel Mandeng</span>
@@ -9,13 +10,21 @@
         </div>
     </div>
 
+    <div class="burger" (click)="onBurgerMenu()">
+        <input type="checkbox" />
+    
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <nav>
         <ul>
             <li><a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" routerLink="/accueil" ><fa-icon [icon]="faHome"></fa-icon><span>Accueil</span></a></li>
-            <li><a routerLinkActive="active-link" routerLink="/a-propos"><fa-icon [icon]="faUserAlt"></fa-icon>A Propos</a></li>
-            <li><a routerLinkActive="active-link" routerLink="/sscovid"><fa-icon [icon]="faListAlt"></fa-icon>Services</a></li>
-            <li><a routerLinkActive="active-link" routerLink="/réalisations"><fa-icon [icon]="faSuitcase"></fa-icon>Réalisations</a></li>
-            <li><a routerLinkActive="active-link" routerLink="/contact"><fa-icon [icon]="faEnvelope"></fa-icon>Contactez-moi</a></li>
+            <li><a routerLinkActive="active-link" routerLink="/a-propos"><fa-icon [icon]="faUserAlt"></fa-icon><span>A Propos</span></a></li>
+            <li><a routerLinkActive="active-link" routerLink="/sscovid"><fa-icon [icon]="faListAlt"></fa-icon><span>Services</span></a></li>
+            <li><a routerLinkActive="active-link" routerLink="/réalisations"><fa-icon [icon]="faSuitcase"></fa-icon><span>Réalisations</span></a></li>
+            <li><a routerLinkActive="active-link" routerLink="/contact"><fa-icon [icon]="faEnvelope"></fa-icon><span>Contactez-moi</span></a></li>
         </ul>
     </nav>
 

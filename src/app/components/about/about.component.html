@@ -1,17 +1,26 @@
 <div class="about">
     <div class="content">
         <span class="title">À Propos</span>
-        <div class="text-img">
+        <div class="text-video">
             <div class="text">
                 <span>
-                    Je suis un développeur web full stack js. Je conçois et développe des sites web en m'outillant de ma créativité sans jamais faire de compromis sur la qualité. Mon expertise comprend: le conseil stratégique, le maquettage des interfaces utlisateurs, le développement, l'optimisation SEO ON PAGE et la mise en production.
+                    Je suis un développeur web full stack js. Je conçois et développe des sites web en m'outillant de ma créativité sans jamais faire de compromis sur la qualité. Mon expertise comprend: le conseil stratégique, le maquettage des interfaces utlisateurs, le développement front-end et back-end, l'optimisation seo on page et la mise en production.
                 </span>
  
                 <span>
                     Je suis autonôme, travailleur et passionné. J'aime me frotter à de nouveaux défis n'hésitez donc pas à me contacter afin qu'on atteigne ensemble vos objectifs. 
                 </span>
             </div>
-            <img class="image" src="../../../assets/img/image-laptop-work.jpeg" alt="image de Samuel Mandeng" />
+
+            <div class="video">
+                <vg-player>
+            
+                    <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls [poster]="posterLink">
+                        <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
+                    </video>
+
+                </vg-player>
+            </div>
         </div>
 
 
@@ -35,19 +44,19 @@
                     <div class="skill">
                         <p>Développement Back-End</p>
                         <div class="skill-bar skill2 wow slideInLeft animated">
-                             <span class="skill-count2">70%</span>
+                             <span class="skill-count2">65%</span>
                         </div>
                     </div>
                     <div class="skill">
                         <p>Web Design</p>
                         <div class="skill-bar skill3 wow slideInLeft animated">
-                            <span class="skill-count3">75%</span>
+                            <span class="skill-count3">65%</span>
                         </div>
                     </div>
                     <div class="skill">
                         <p>Optimisation SEO</p>
                         <div class="skill-bar skill4 wow slideInLeft animated">
-                            <span class="skill-count4">85%</span>
+                            <span class="skill-count4">90%</span>
                         </div>
                     </div>
                     <div class="skill">
@@ -59,7 +68,7 @@
                     <div class="skill">
                         <p>Node.js</p>
                         <div class="skill-bar skill6 wow slideInLeft animated">
-                            <span class="skill-count6">70%</span>
+                            <span class="skill-count6">65%</span>
                         </div>
                     </div>
                 </div>

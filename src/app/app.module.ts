@@ -13,6 +13,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { Sscovid19Component } from './components/sscovid19/sscovid19.component';
 
+
+import { VgCoreModule } from '@videogular/ngx-videogular/core';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
+import { HeaderComponent } from './components/header/header.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +30,17 @@ import { Sscovid19Component } from './components/sscovid19/sscovid19.component';
     ServicesComponent,
     AboutComponent,
     NotFoundComponent,
-    Sscovid19Component
+    Sscovid19Component,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    VgBufferingModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

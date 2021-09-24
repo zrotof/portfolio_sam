@@ -1,10 +1,11 @@
 .services{
     margin: 0 0 0 300px;
     height: 100vh;
-    width: calc(100% - 300px);
+    width: calc(100vw - 300px);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+
     background-color: #D8D8D8;
     color: #363636;
 
@@ -76,4 +77,12 @@
             }
         }
     }
+}
+
+@media all and (max-width: 1012px){
+    .services{
+        margin: 0 0 0 100px;
+        width: calc(100% - 100px);
+    }
+
 }

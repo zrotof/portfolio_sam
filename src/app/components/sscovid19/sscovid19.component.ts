@@ -12,6 +12,8 @@ export class Sscovid19Component implements OnInit {
 
   faBackward = faBackward;
 
+  posterLink = "../../../assets/img/sscovid19.png";
+
   constructor() { }
 
   ngOnInit(): void {
