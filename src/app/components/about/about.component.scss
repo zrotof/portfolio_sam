@@ -406,6 +406,17 @@
 
 }
 
+
+@media all and (max-width: 689px){
+    .about{
+        
+        .content{
+            margin: 0 23px;
+        }
+    }
+
+}
+
 @media all and (max-width: 675px){
     .about{
         margin: 0 0 0 60px;

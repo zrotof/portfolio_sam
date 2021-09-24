@@ -54,16 +54,16 @@
                     width: 100%;
                     height: 130px;
                 }
-                
 
-                .description-title{
-                    font-weight: 650;
-                    margin-top: 15px;
-                    
+                .text-title{
+                    font-weight: bold;
+                    font-size: 1.3em;
+                    margin: 20px 0 10px 0;
                 }
+      
 
                 .description-text{
-                    margin: 10px 10px 0 10px;
+                    margin: 0 10px 10px 10px;
                     text-align: justify;
                     font-size: 0.9em;
                     font-weight: 350;
@@ -71,7 +71,7 @@
 
                 
                 button{
-                    padding: 2px 20px;
+                    padding: 6px 22px;
                     border-radius: 100px;
                     margin: 10px 0 20px 0;
                     border: none;
@@ -115,10 +115,22 @@
 
 }
 
+@media all and (max-width: 689px){
+    .projects{
+        
+        .content{
+            margin: 0 23px;
+        }
+    }
+
+}
+
 @media all and (max-width: 675px){
     .projects{
         margin: 0 0 0 60px;
         width: calc(100vw - 60px);
+
     }
 
 }
+

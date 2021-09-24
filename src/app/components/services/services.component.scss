@@ -5,7 +5,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
     background-color: #D8D8D8;
     color: #363636;
 
@@ -83,6 +82,17 @@
     .services{
         margin: 0 0 0 100px;
         width: calc(100vw - 100px);
+    }
+
+}
+
+
+@media all and (max-width: 689px){
+    .services{
+        
+        .content{
+            margin: 0 23px;
+        }
     }
 
 }
