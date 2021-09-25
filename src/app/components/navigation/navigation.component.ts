@@ -20,6 +20,7 @@ export class NavigationComponent implements OnInit {
   faEnvelope = faEnvelope;
 
   screenWidth: any;
+  
   isBurgerMenuClicked: boolean = false;
   
   constructor() { }

@@ -338,8 +338,11 @@
 @media all and (max-width: 1289px){
 
     .about{
+
         .content{
+        
             .text-video{
+    
                 flex-direction: column-reverse;
 
                 .video{
@@ -361,16 +364,17 @@
 
                 .others{
                     width: 100%;
-                   flex-direction: row;
+                    flex-direction: row;
                     flex-wrap: wrap;
+                    justify-content: space-between;
 
                    .formation{
                        width: 100%;
                    }
 
                    .langues{
-                       width: 50%;
-                       margin: 60px 0 60px 0;
+                       width: fit-content;
+                       margin: 60px 10px 60px 0;
 
                        .langue{
                            margin-left:0;
@@ -378,12 +382,12 @@
                    }
 
                    .hobbies{
-                       width: 50%;
-                       margin: 60px 0 60px 0;
-                       text-align: right;
-                       .hobby{
-                           margin-left: 0;
-                       }
+                        width: fit-content;
+                        margin: 60px 0 60px 0;
+
+                        .hobby{
+                            margin: 0;
+                        }
                    }
                 }
 
@@ -393,7 +397,6 @@
                     width: 100%;
                 }
             }
-            
         }
     }
 }
@@ -403,9 +406,7 @@
         margin: 0 0 0 100px;
         width: calc(100vw - 100px);
     }
-
 }
-
 
 @media all and (max-width: 689px){
     .about{
@@ -414,13 +415,152 @@
             margin: 0 23px;
         }
     }
-
 }
 
 @media all and (max-width: 675px){
     .about{
         margin: 0 0 0 60px;
         width: calc(100vw - 60px);
-    }
 
+        .content{
+
+            .actions{
+                margin-bottom: -15px;
+                flex-direction: column;
+
+                button:first-child{
+                    margin: 0 0 10px 0;
+                }
+
+                button:last-child{
+                    margin: 10px 0 0 0;
+                    padding: 6px 22px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 580px){
+    .about{
+
+        .content{
+
+            .text-video{
+
+                .video{
+                    width: 100%;
+
+                }
+            }
+
+            .profil{
+
+                .technos-bloc{
+
+                    .technos{
+
+                        .skill{
+                            font-size: 0.95em ;
+
+                            .wow{
+
+                                span{
+                                    font-size: 0.92em;
+                                    right: -10%;
+                                    top: -22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 500px){
+    .about{
+
+        .content{
+
+            .profil{
+
+                .technos-bloc{
+
+                    .technos{
+
+                        .skill{
+
+                            .wow{
+
+                                .soixante-cinq{
+                                    right: -52%;
+                                }
+
+                                .quatre-vingt{
+                                    right: -24%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 438px){
+
+    .about{
+
+        .content{
+
+            .profil{
+
+                .technos-bloc{
+
+                    .technos{
+
+                        .skill{
+                            
+                            p{
+
+                                .word-to-remove{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .others{
+
+                   .langues{
+                       width: fit-content;
+                       margin: 40px 10px 15px 0;
+
+                       .langue{
+                           margin-left:0;
+                       }
+                   }
+
+                   .hobbies{
+                        width: fit-content;
+                        margin: 15px 0 40px 0;
+
+                        .hobby{
+                            margin: 0;
+                        }
+                   }
+                }
+
+                .technos-bloc{
+                    padding-top: 20px;
+                    margin-top: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
