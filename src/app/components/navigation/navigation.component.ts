@@ -41,17 +41,19 @@ export class NavigationComponent implements OnInit {
     // À chaque clique sur l'input on vérifie si l'input est cochée
     if(inputstatus.checked === true){
       
-      navView.classList.add("toggle")
+      navView.classList.remove("toggle-out")
+      navView.classList.add("toggle-in")
       
       menuText.forEach(element => {
         element.style.display="inline-block";
+
       });
 
       this.isBurgerMenuClicked = true;
 
     }
     else{
-      navView.classList.remove("toggle");
+      navView.classList.add("toggle-out");
       menuText.forEach(element => {
         element.style.display="none";
       });
@@ -69,7 +71,7 @@ export class NavigationComponent implements OnInit {
       if(this.screenWidth > 1011){
      
         menuText.forEach(element => {
-          element.style.display="inline";
+          element.style.display="inline-block";
         });
       }
       else{
@@ -78,7 +80,8 @@ export class NavigationComponent implements OnInit {
 
         if(inputstatus.checked === true){
           menuText.forEach(element => {
-            element.style.display="inline";
+            
+            element.style.display="inline-block";
           });
         }
         else{
