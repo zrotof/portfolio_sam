@@ -35,6 +35,17 @@ $fontcolor : #363636;
 
         }
 
+        .back-button:hover{
+
+                color: #129BBC;
+                font-weight: bold;
+
+            
+
+        }
+
+
+
         .description{
             display: flex;
             flex-direction: column;
@@ -167,6 +178,7 @@ $fontcolor : #363636;
                         transition: all .35s;
 
                         ul{
+                            margin: 7px 0;
                             position: relative;
                             padding-left: 18px;
                         }

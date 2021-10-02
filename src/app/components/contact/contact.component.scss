@@ -344,17 +344,20 @@
             }
 
             form{
-                padding: 30px 10px !important;
-
+                padding: 30px 5px !important;
 
                 .name-email{
                     flex-direction: column;
-                    height: 100px !important;
+                    height: 90px !important;
 
                     .name-bloc,.email-bloc{
-                        height: 40px !important;
+                        height: 35px !important;
                         width: 100% !important;
                     }
+                }
+
+                .objet-bloc{
+                    height:35px !important;
                 }
             }
         }
