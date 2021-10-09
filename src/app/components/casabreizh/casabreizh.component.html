@@ -1,0 +1,79 @@
+<div class="elites">
+    <div class="content">
+        <button class="back-button" (click)="goOnProjectsList()"><fa-icon [icon]="faBackward"></fa-icon>Retour</button>
+
+
+        <div class="description">
+            <img src="../../../assets/img/logos/casabreizh_logo.png" alt="Logo of sscovid19 website">
+            <span class="description-title">Description</span>
+            <span>Le restaurant <strong>CASABREIZH</strong> est un restaurant situé dans la ville de Rennes. Il propose des plats africains et des plats bretons. </span>
+            <span>Il possède un site web vieux de plus de 10 ans, mais ce dernier ne répondait plus aux réalités et exigences des clients. Et aussi, il est impossible pour le restaurateur de mettre à jour ses menus ou indiquer aux utilisateurs l'ndisponibilité ou non des plats. </span>
+            <span>Les exigences de ce projet sont les suivantes :</span>
+
+            <ul>
+                <li>permettre aux utilisateurs de consulter les menus, plats, desserts, boissons proposés par le restaurant</li>
+                <li>créer une interface administrateur qui permet de mettre à jour les plats proposés sur le site</li>
+                <li>optimiser le référencement SEO</li>
+                <li>terminer le développement du site web et le mettre en ligne</li>
+            </ul>
+
+                <button (click)="goOnElitesVoyagesWebsite()">Site web en cours de développement</button>
+
+        </div>    
+
+        <div class="organisation">            
+           
+            <div class="video">
+
+                <vg-player>
+                    <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls [poster]="posterLink">
+                        <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
+                    </video>
+                </vg-player>
+
+            </div>
+
+        </div>
+
+        <div class="technos-bloc">
+            <span class="title">Technologies utilisées</span>
+
+
+            <div class="technos">
+                <div class="techno">
+                    <img src="../../../assets/img/logos/angular_logo.png" alt="angular logo">
+                    <span>Angular 12</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/node_logo.png" alt="node js logo">
+                    <span>Node js</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/express_logo.png" alt="express logo">
+                    <span>Express js</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/mongodb_logo.png" alt="mongoDB logo">
+                    <span>Mongo DB</span>
+                </div>
+            
+                <div class="techno">
+                    <img src="../../../assets/img/logos/ovh_logo.png" alt="ionos logo">
+                    <span>OVH</span>
+                </div>
+
+                <div class="techno">
+                    <img src="../../../assets/img/logos/json_web_token_logo.png" alt="ionos logo">
+                    <span>JSON Web Token</span>
+                </div>
+
+                <div class="techno">
+                    <img src="../../../assets/img/logos/adobe_xd.png" alt="ionos logo">
+                    <span>Adobe XD</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

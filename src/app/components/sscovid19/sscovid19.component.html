@@ -1,115 +1,78 @@
 <div class="sscovid">
     <div class="content">
-        <button class="back-button"><fa-icon [icon]="faBackward"></fa-icon>Retour</button>
+        <button class="back-button" (click)="goOnProjectsList()"><fa-icon [icon]="faBackward"></fa-icon>Retour</button>
 
 
         <div class="description">
-            <img src="../../../assets/img/sscovid19_logo.png" alt="Logo of sscovid19 website">
+            <img src="../../../assets/img/logos/sscovid19_logo.png" alt="Logo of sscovid19 website">
             <span class="description-title">Description</span>
-            <span><strong>SSCOVID19</strong> est un projet personnel que j'ai réalisé dans le but de participer activement à la lutte contre la covid-19 dans le monde en permettant à la terre entière de rester informée sur l'évolution du virus.</span>
+            <span><strong>SSCOVID19</strong> est un projet personnel que j'ai réalisé dans le but de participer activement à la lutte contre la covid-19 dans le monde. Il offre la possibilité à de rester informé sur l'évolution du virus notamment avec des mises à jour automatiques toutes les 45 minutes.</span>
             <span>C'est une application web bilingue ( anglais, français ) qui prend en compte des données de plus de 215 pays et qui permet: </span>
                 <ul>
                     <li>de consulter les chiffres totaux mondiaux de l'épidémie</li>
-                    <li>d'en consulter les chiffres par pays et par continent</li>
-                    <li>de visualiser les graphes d'évolution de la maladie et les graphes d'évolution des vaccinations dans le temps ( depuis janvier 2020 ) dans le monde et par pays</li>
+                    <li>de consulter les chiffres par continents et par pays</li>
+                    <li>de visualiser les graphes d'évolution de la maladie et les graphes d'évolution des vaccinations ( depuis janvier 2020 ) dans le monde et par pays</li>
                     <li>de visualiser la carte du monde avec des indicateurs de couleur suivant la gravité des cas dans différents pays</li>
                     <li>de rester à jour sur les faits d'actualité de cette pandémie </li>
                 </ul>
 
-                <button>Visitez le site</button>
-        </div>
+                <button (click)="goOnSscovidWebsite()">Visitez le site</button>
+        </div>    
 
-        <div class="organisation">
-            <span class="organisation-title">Organisation Du Travail</span>
-            
+        <div class="organisation">            
            
             <div class="video">
-                    <vg-player>
-                
-                        <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls [poster]="posterLink">
-                            <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
-                        </video>
 
-                    </vg-player>
-            </div>
-
-
-
-            <div class="accordions">
-
-                <div class="tab">
-                    <input type="checkbox" id="chck1">
-                    <label class="tab-label" for="chck1">1) Analyse des solutions existantes</label>
-                    <div class="tab-content">
-                        <span> Je suis parti du principe de création d'une solution simple et facile d'utilisation. J'ai donc préalablement inspecté des applications et sites web qui présentaient également des données sur la pandémie.  </span>
-                        <span>Fort a été de constater que:</span>
-                        <ul>
-                            <li>Plusieurs sites web mettaient beaucoup plus en avant, les informations des pays originaires des développeurs</li>
-                            <li>Plusieurs d'entre eux présentaient des données qui prennent beaucoup de temps à être affichées aux utilisateurs</li>
-                            <li>Sur certains, il y avait un affichage massif d'information et des résultats contenant des termes statistiques scientifiques pas facilement accessibles à un utilisateur lambda</li>
-                        </ul>
-                        <span>Je me suis donc proposé de développer une solution en prenant en compte les points cités plus haut en y joignant un soupçon de créativité.</span>
-                    
-                    </div>
-                </div>
-
-                <div class="tab">
-                    <input type="checkbox" id="chck2">
-                    <label class="tab-label" for="chck2">2) Réalisation des interfaces utilisateurs</label>
-                    <div class="tab-content">
-                        <span>La réalisation des interfaces utilisateurs s'est faite en plusieurs phases. Dans un premier temps j'ai réalisé seul, les premières versions des interfaces. </span>
-                        <span>N'ayant pas de client(s) directe(s) sur ce projet, j'ai alors présenté dans un second temps les interfaces réalisées aux amis et à la famille. </span>
-                        <span>C'est à la suite de ces vas et viens que j'ai donc obtenu des versions finales de mes interfaces.</span>
-                    </div>
-                </div>
-
-                <div class="tab">
-                    <input type="checkbox" id="chck3">
-                    <label class="tab-label" for="chck3">3) Définition de l'architecture et choix des technologies</label>
-                    <div class="tab-content">
-                        <img src="../../../assets/img/architecture.png" alt="architecture of sscovid19.com"/>
-                    </div>
-                </div>
-
-                <div class="tab">
-                    <input type="checkbox" id="chck4">
-                    <label class="tab-label" for="chck4">4) Développement back-end</label>
-                    <div class="tab-content">
-                        <ul>
-                            <li>création et connexion de la base de données</li>
-                            <li>récupération des données brutes de l'API externe desease.sh pour un stockage spécifique </li>
-                            <li>création des endpoints d'exposition de l'API</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="tab">
-                    <input type="checkbox" id="chck5">
-                    <label class="tab-label" for="chck5">5) Développement Front-end</label>
-                    <div class="tab-content">
-                        <ul>
-                            <li>intégration des maquettes et SEO on page</li>
-                            <li>Responsive design</li>
-                            <li>ajout de google analytics en vue de monitorer le comportement des visiteurs </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="tab">
-                    <input type="checkbox" id="chck6">
-                    <label class="tab-label" for="chck6">6) Mise en production</label>
-                    <div class="tab-content">
-                        <ul>
-                            <li>hébergement du back-end sur heoku</li>
-                            <li>achat du nom de domaine sscovid19.com</li>
-                            <li>hébergement du front-end sur hostinger</li>
-                        </ul>
-                    </div>
-                </div>
+                <vg-player>
+                    <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls [poster]="posterLink">
+                        <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
+                    </video>
+                </vg-player>
 
             </div>
 
         </div>
 
+        <div class="technos-bloc">
+            <span class="title">Technologies utilisées</span>
+
+
+            <div class="technos">
+                <div class="techno">
+                    <img src="../../../assets/img/logos/angular_logo.png" alt="angular logo">
+                    <span>Angular 11</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/node_logo.png" alt="node js logo">
+                    <span>Node js</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/express_logo.png" alt="express logo">
+                    <span>Express js</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/postgres_logo.png" alt="postgresql logo">
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/amcharts_logo.png" alt="amchartlogo">
+                    <span>AmCharts</span>
+                </div>
+
+                <div class="techno">
+                    <img src="../../../assets/img/logos/google_analytics_logo.png" alt="google analytics logo">
+                    <span>Google Analytics</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/heroku_logo.png" alt="heroku logo">
+                    <span>Heroku</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/hostinger_logo.png" alt="angular-logo">
+                    <span>Hostinger</span>
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>

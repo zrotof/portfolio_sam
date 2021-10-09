@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute, Router} from '@angular/router';
 import { faBackward } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -14,9 +14,20 @@ export class Sscovid19Component implements OnInit {
 
   posterLink = "../../../assets/img/sscovid19.png";
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+
+  goOnProjectsList(){
+    this.router.navigate(['réalisations']);
+  }
+
+
+  goOnSscovidWebsite(){
+  window.open("https://sscovid19.com", "_blank");
+
+}
+
 
 }

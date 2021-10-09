@@ -19,6 +19,9 @@ import { VgControlsModule } from '@videogular/ngx-videogular/controls';
 import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 import { HeaderComponent } from './components/header/header.component';
+import { ElitesvComponent } from './components/elitesv/elitesv.component';
+import { CasabreizhComponent } from './components/casabreizh/casabreizh.component';
+import { FootComponent } from './components/foot/foot.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { HeaderComponent } from './components/header/header.component';
     AboutComponent,
     NotFoundComponent,
     Sscovid19Component,
-    HeaderComponent
+    HeaderComponent,
+    ElitesvComponent,
+    CasabreizhComponent,
+    FootComponent
   ],
   imports: [
     BrowserModule,

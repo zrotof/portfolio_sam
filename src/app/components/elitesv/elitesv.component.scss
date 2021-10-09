@@ -1,6 +1,6 @@
 $fontcolor : #363636;
 
-.sscovid{
+.elites{
     margin: 0 0 0 300px;
     width: calc(100vw - 300px);
     min-height: 100vh;
@@ -53,8 +53,8 @@ $fontcolor : #363636;
             justify-content: center;
 
             img{
-                width: 100px;
-                height: 100px;
+                width: 230px;
+                height: 80px;
                 margin-bottom: 30px;
             }
 
@@ -138,6 +138,7 @@ $fontcolor : #363636;
             .technos{
                 display: flex;
                 flex-wrap: wrap;
+                align-items: center;
                 justify-content: center;
                
                 .techno{
@@ -161,17 +162,16 @@ $fontcolor : #363636;
 
 
 @media all and (max-width: 1012px){
-    .sscovid{
+    .elites{
         margin: 0 0 0 100px;
         width: calc(100vw - 100px);
     }
 }
 
 @media all and (max-width: 882px){
-    .sscovid{
+    .elites{
 
         .content{
-
             .organisation{
                 .video{
 
@@ -182,14 +182,12 @@ $fontcolor : #363636;
                 }
             }
         }
-        
-
     }
 }
 
 
 @media all and (max-width: 689px){
-    .sscovid{
+    .elites{
         .content{
             margin: 0 23px;
         }
@@ -198,7 +196,7 @@ $fontcolor : #363636;
 }
 
 @media all and (max-width: 675px){
-    .sscovid{
+    .elites{
         margin: 0 0 0 60px;
         width: calc(100vw - 60px);
     }
