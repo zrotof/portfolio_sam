@@ -53,8 +53,8 @@ $fontcolor : #363636;
             justify-content: center;
 
             img{
-                width: 120px;
-                height: 80px;
+                width: 300px;
+                height: 180px;
                 margin-bottom: 30px;
             }
 
@@ -69,6 +69,10 @@ $fontcolor : #363636;
                 width: 100%;
             }
 
+            span:nth-child(4){
+                margin-top: 10px;
+            }
+
             ul{
                 margin-top: 15px;
                 list-style-position: inside;
@@ -80,7 +84,7 @@ $fontcolor : #363636;
 
                 padding: 5px 25px;
                 border-radius: 100px;
-                margin: 50px 20px 0 20px;
+                margin: 50px 0 ;
                 border: none;
                 cursor: pointer;
                 font-size: 1em;
@@ -100,40 +104,17 @@ $fontcolor : #363636;
             }
         }
 
-        .organisation{
-            display: flex;
-            flex-direction: column;
-            position: relative;
-
-            .video{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                width: 100%;
-                height: 300px;
-                margin: 50px 0 70px 0;
-
-                vg-player{
-                    width: 600px;
-                    height: 100%;
-                    border-radius: 5px;
-                }
-               
-            }
-
-        }
-
         .technos-bloc{
             display: flex;
             justify-content: center;
             flex-direction: column;
+            padding-bottom: 20px;
+
             .title{
                 margin-bottom: 30px;
                 font-weight: bold;
                 font-size: 1.6em;
             }
-
 
             .technos{
                 display: flex;

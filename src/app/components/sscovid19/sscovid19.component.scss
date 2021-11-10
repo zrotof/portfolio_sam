@@ -5,14 +5,14 @@ $fontcolor : #363636;
     width: calc(100vw - 300px);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    background-color: #D8D8D8;
+    background-color: #80808014;
     color: $fontcolor;
 
     .content{
         width: 100%;
-        margin: 0 55px;
+        padding: 0 55px;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -53,8 +53,8 @@ $fontcolor : #363636;
             justify-content: center;
 
             img{
-                width: 100px;
-                height: 100px;
+                width: 300px;
+                height: 180px;
                 margin-bottom: 30px;
             }
 
@@ -80,7 +80,7 @@ $fontcolor : #363636;
 
                 padding: 5px 25px;
                 border-radius: 100px;
-                margin: 50px 20px 0 20px;
+                margin: 50px 20px;
                 border: none;
                 cursor: pointer;
                 font-size: 1em;
@@ -98,30 +98,6 @@ $fontcolor : #363636;
                 box-shadow: 4px 5px 6px -1px #129BBC;
 
             }
-        }
-
-        .organisation{
-            display: flex;
-            flex-direction: column;
-            position: relative;
-
-            .video{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                width: 100%;
-                height: 300px;
-                margin: 50px 0 70px 0;
-
-                vg-player{
-                    width: 600px;
-                    height: 100%;
-                    border-radius: 5px;
-                }
-               
-            }
-
         }
 
         .technos-bloc{
@@ -167,31 +143,11 @@ $fontcolor : #363636;
     }
 }
 
-@media all and (max-width: 882px){
-    .sscovid{
-
-        .content{
-
-            .organisation{
-                .video{
-
-                    height: 220px;
-                    vg-player{
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        
-
-    }
-}
-
 
 @media all and (max-width: 689px){
     .sscovid{
         .content{
-            margin: 0 23px;
+            padding: 0 23px;
         }
     }
 
