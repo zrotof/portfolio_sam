@@ -11,7 +11,8 @@
  
     
     .images-medias{
-        display: none
+        display: none;
+        
     }
 
 
@@ -122,7 +123,7 @@
             padding: 20px 40px ;
             border-radius: 10px;
             margin-bottom: 30px;
-    
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;    
             .nav-image{
                 width: 160px;
                 height: 160px;
@@ -137,12 +138,63 @@
                 width: 100%; 
                 margin-top: 10px;  
         
-                img{
-                    height: 20px;
-                    width: 20px;
-                    margin: 0 8px;
-                    cursor: pointer;
+                a{
+    
+                    div{
+                        height: 20px;
+                        width: 20px;
+                        margin: 0 8px;
+                        cursor: pointer;
+                    }
                 }
+    
+    
+                a:nth-child(1) div{
+                    background-image: url("../../../assets/img/linkedin.png");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+    
+                a:nth-child(1) div:hover{
+                    background-image: url("../../../assets/img/linkedin-color.jpeg");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+    
+    
+    
+                a:nth-child(2) div{
+                    background-image: url("../../../assets/img/instagram.png");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+    
+                a:nth-child(2) div:hover{
+                    background-image: url("../../../assets/img/instagram-color.png");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+    
+                a:nth-child(3) div{
+                    background-image: url("../../../assets/img/github.png");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+    
+                a:nth-child(3) div:hover{
+                    background-image: url("../../../assets/img/github-color.png");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+
+
             }
         }
     }

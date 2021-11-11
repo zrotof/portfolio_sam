@@ -157,6 +157,27 @@ $fontcolor : #363636;
     .sscovid{
         margin: 0 0 0 60px;
         width: calc(100vw - 60px);
+
+        .content{
+
+            .back-button{
+                padding: 2px 15px;
+                font-size: 0.95em;
+            }
+
+            .description{
+
+                img{
+                    width:200px;
+                    height: 120px;
+                }
+
+                button{
+                    padding: 2px 15px;
+                    font-size: 0.95em;
+                }
+            }
+        }
     }
 
 }
