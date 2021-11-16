@@ -25,6 +25,7 @@ export class AboutComponent implements OnInit {
   faCalendarAlt = faCalendarAlt;
   faFutbol = faFutbol;
   faGuitar = faGuitar;
+  
   posterLink = "../../../assets/img/sscovid19.png";
 
   constructor() { }

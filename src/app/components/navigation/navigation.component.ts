@@ -63,7 +63,6 @@ export class NavigationComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.screenWidth = window.innerWidth;
-    console.log(this.screenWidth)
     var   menuText = <NodeListOf<HTMLElement>>document.querySelectorAll("a span");
 
 

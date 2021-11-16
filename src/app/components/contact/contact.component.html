@@ -31,29 +31,40 @@
                 </div>
             </div>
     
-            <form>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmitContactForm()">
                 <div class="name-email">
                     <div class="name-bloc">
-                        <input id="name-input" type="text" placeholder="Nom">
+                        <input formControlName="name" id="name-input" type="text" placeholder="Nom">
                         <label class="label-id"for="name">Nom</label>
+                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required">Renseignez votre nom</div>
+                        </div>
                     </div>
                     <div class="email-bloc">
-                        <input id="email-input" type="text" placeholder="Email">
+                        <input formControlName="email" id="email-input" type="text" placeholder="Email">
                         <label class="label-id" for="email">Email</label>
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Renseignez l'addresse mail</div>
+                            <div *ngIf="f.email.errors.email">Addresse mail invalide</div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="objet-bloc">
-                    <input id="objet-input" type="text" placeholder="Objet">
+                    <input formControlName="subject" id="objet-input" type="text" placeholder="Objet">
                     <label class="label-id" for="objet-input">Objet</label>
                 </div>
 
                 <div class="message-bloc">
-                    <textarea id="message-area" type="text" placeholder="Message"></textarea>
+                    <textarea formControlName="message" id="message-area" type="text" placeholder="Message"></textarea>
                     <label class="label-id" for="message-area">Message</label>
+                    <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+                        <div *ngIf="f.message.errors.required">Message absent</div>
+                        <div *ngIf="f.message.errors.minlength">Votre message est trop court </div>
+                    </div>
                 </div>
 
-                <button >Envoyer <fa-icon [icon]="faPaperPlane"></fa-icon></button>
+                <button type="submit" >Envoyer <fa-icon [icon]="faPaperPlane"></fa-icon></button>
             </form>
     
         </div>
