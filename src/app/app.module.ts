@@ -55,8 +55,8 @@ import {RippleModule} from 'primeng/ripple';
     VgOverlayPlayModule,
     VgCoreModule,
     ReactiveFormsModule,
-    ButtonModule,
     ToastModule,
+    ButtonModule,
     RippleModule
   ],
   providers: [],

@@ -6,13 +6,14 @@ import { faPhone,
   faEnvelope,
 faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-import {MessageService} from 'primeng/api';
+import { MessageService } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  providers:[MessageService]
 })
 export class ContactComponent implements OnInit {
 
@@ -26,7 +27,10 @@ export class ContactComponent implements OnInit {
   error = false;
   success = false;
 
-  constructor(private fb: FormBuilder, private mailService: MailService, private messageService: MessageService, private primengConfig: PrimeNGConfig) { }
+  constructor(private fb: FormBuilder, 
+    private mailService: MailService, 
+    private messageService: MessageService,
+     private primengConfig: PrimeNGConfig) { }
 
   ngOnInit(): void {
 
@@ -38,7 +42,6 @@ export class ContactComponent implements OnInit {
   
   });
 
-  this.primengConfig.ripple = true;
 
   
   }
@@ -56,20 +59,18 @@ export class ContactComponent implements OnInit {
     //We display a suitable information according to if the mail is send or not
     this.mailService.sendMail(JSON.stringify(this.contactForm.value)).subscribe(resp =>{
 
-      if(resp['message'] === "success"){
-        this.messageService.add({severity:'success', summary: 'Success', detail: 'Message Content'});
-
+      if(resp['message'] === "success"){        
+        this.messageService.add({severity:'success', detail: "Message envoyé."});
+        this.onReset();
       }
 
       else{
 
-        this.messageService.add({severity:'error', summary: 'Success', detail: 'Message Content'});
-
+        this.messageService.add({severity:'error',detail: "Erreur lors de l'envoi"});
+    
       }
 
     });
-
-    this.onReset();
   }
 
     // convenience getter for easy access to form fields
