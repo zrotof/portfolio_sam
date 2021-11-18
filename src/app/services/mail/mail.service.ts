@@ -17,6 +17,6 @@ export class MailService {
     };
 
     console.log("yes yes");
-    return this.httpRequest.post("http://localhost:3000/mail", mailInfo, headers); 
+    return this.httpRequest.post("https://sam-man-portfolio-backend.herokuapp.com/mail", mailInfo, headers); 
   }
 }
