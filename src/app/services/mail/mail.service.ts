@@ -16,7 +16,6 @@ export class MailService {
       })
     };
 
-    console.log("yes yes");
     return this.httpRequest.post("https://sam-man-portfolio-backend.herokuapp.com/mail", mailInfo, headers); 
   }
 }

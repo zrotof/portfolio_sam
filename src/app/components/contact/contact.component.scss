@@ -357,12 +357,13 @@
             }
 
             form{
+                
                 padding: 30px 5px !important;
 
                 .name-email{
                     flex-direction: column;
                     min-height: 90px !important;
-
+                
                     .name-bloc,.email-bloc{
                         
                         width: 100% !important;
@@ -371,10 +372,8 @@
                             width: 100% !important;
                         }
                     }
-                }
-
-                        
-
+                }            
+                
                 .objet-bloc{
                     height:35px !important;
                 }
