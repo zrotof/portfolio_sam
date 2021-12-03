@@ -1,6 +1,6 @@
 $colorBlue: #00011e ;
 $colorRed: #FF3100;
-$backgroung: #f3f3f3;
+$background: #f3f3f3;
 
 .home{
     margin: 0 0 0 300px;
@@ -10,7 +10,7 @@ $backgroung: #f3f3f3;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f3f3f3;
+    background-color: $background;
     color: $colorBlue;
  
     
@@ -67,7 +67,7 @@ $backgroung: #f3f3f3;
                 content: "";
                 position: absolute;
                 left: 0;
-                background-color: $backgroung;
+                background-color: $background;
                 width: 100%;
                 height: 100%;
                 border-left: 2px solid $colorRed;
@@ -123,7 +123,7 @@ $backgroung: #f3f3f3;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #363636;
+            background-color: $colorBlue;
             padding: 20px 40px ;
             border-radius: 10px;
             margin-bottom: 30px;
@@ -213,7 +213,6 @@ $backgroung: #f3f3f3;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #363636;
             padding: 10px 20px ;
             border-radius: 10px;
             margin-bottom: 30px;
