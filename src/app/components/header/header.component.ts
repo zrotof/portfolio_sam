@@ -39,8 +39,10 @@ export class HeaderComponent implements OnInit {
   currentLinkNumber = 1;
   currentAnchorTag ="accueil";
 
-  constructor(private route: ActivatedRoute, 
-    private router: Router) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private router: Router) 
+    { }
 
   ngOnInit(): void {
     
@@ -92,36 +94,37 @@ export class HeaderComponent implements OnInit {
         let projets = <HTMLElement>document.querySelector('.projects');
         let contact = <HTMLElement>document.querySelector('.contact');
     
-        // Changing background of header when scroll to a height bigger than the header height
-        if (window.pageYOffset > header.clientHeight) {
-          header.classList.add('navbar-background-on-scroll');
-        } else {
-          header.classList.remove('navbar-background-on-scroll');
+        if(!this.isBurgerMenuClicked){
+          // Changing background of header when scroll to a height bigger than the header height
+          if (window.pageYOffset > header.clientHeight) {
+            header.classList.add('navbar-background-on-scroll');
+          } else {
+            header.classList.remove('navbar-background-on-scroll');
+          }
+          
+          //changinthe color of link
+          if(window.pageYOffset < about.offsetHeight){            
+              this.setActiveLink(1);
+          }
+          
+          if((window.pageYOffset < services.offsetTop) && window.pageYOffset >= about.offsetTop) {
+              
+                this.setActiveLink(2);
+          }
+    
+          if ((window.pageYOffset < projets.offsetTop) && window.pageYOffset >= services.offsetTop) {
+            this.setActiveLink(3);
+          }
+    
+          if ((window.pageYOffset < contact.offsetTop) && window.pageYOffset >= projets.offsetTop) {
+            this.setActiveLink(4);
+          }  
+    
+          if (window.pageYOffset >= contact.offsetTop) {
+            this.setActiveLink(5);
+          }
         }
-
-
-        //changinthe color of link
-        if(window.pageYOffset < about.offsetHeight){            
-            this.setActiveLink(1);
-        }
-        
-        if((window.pageYOffset < services.offsetTop) && window.pageYOffset >= about.offsetTop) {
-            
-              this.setActiveLink(2);
-        }
-  
-        if ((window.pageYOffset < projets.offsetTop) && window.pageYOffset >= services.offsetTop) {
-          this.setActiveLink(3);
-        }
-  
-        if ((window.pageYOffset < contact.offsetTop) && window.pageYOffset >= projets.offsetTop) {
-          this.setActiveLink(4);
-        }  
-  
-        if (window.pageYOffset >= contact.offsetTop) {
-          this.setActiveLink(5);
-        }
-    }
+      }
 
 
 //Redirect to the good link on load so that this link will be activated
