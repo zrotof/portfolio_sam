@@ -16,6 +16,7 @@ import { FootComponent } from './components/foot/foot.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 
+
 import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 import {RippleModule} from 'primeng/ripple';
@@ -24,6 +25,7 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     HomeComponent,
     NotFoundComponent,
