@@ -19,7 +19,7 @@ export class CasabreizhComponent implements OnInit {
   }
 
   goOnProjectsList(){
-    this.router.navigate(['réalisations']);
+    this.router.navigate(['accueil']);
   }
 
   goOnElitesVoyagesWebsite(){

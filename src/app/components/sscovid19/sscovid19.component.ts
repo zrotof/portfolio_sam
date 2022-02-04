@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router} from '@angular/router';
 import { faBackward } from '@fortawesome/free-solid-svg-icons';
-
+import {DynamicDialogRef} from 'primeng/dynamicdialog';
+import {DynamicDialogConfig} from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-sscovid19',
@@ -12,22 +12,10 @@ export class Sscovid19Component implements OnInit {
 
   faBackward = faBackward;
 
-  posterLink = "../../../assets/img/sscovid19.png";
-
-  constructor(private router: Router) { }
+  constructor(public ref: DynamicDialogRef, public config: DynamicDialogConfig) { }
 
   ngOnInit(): void {
   }
-
-  goOnProjectsList(){
-    this.router.navigate(['réalisations']);
-  }
-
-
-  goOnSscovidWebsite(){
-  window.open("https://sscovid19.com", "_blank");
-
-}
 
 
 }

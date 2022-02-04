@@ -1,23 +1,352 @@
-<div class="home">
-    <div class="images-medias">
-        <img class="nav-image" src="../../../assets/img/moi.jpeg" alt="image de Samuel Mandeng"/>
-        <div class="medias">
+<div class="app">
 
-            <a href="https://www.linkedin.com/in/bonachisamuel" aria-label="Github" rel="noopener" target="_blank"><div></div></a>
-            <a href="https://www.instagram.com/zrotof_" aria-label="Instagram" rel="noopener" target="_blank"> <div></div></a>
-            <a href="https://github.com/zrotof" aria-label="Github" rel="noopener" target="_blank"><div></div></a>
+        <section class="hero" id="accueil">
+            
+            <div class="content my-container">
 
-        </div>
-    </div>
-    <span class="greetings">Salut, je m'appelle <span class="name"> Samuel Mandeng</span></span>
-    <div class="work"> 
-        <span>je suis un </span>
-        <ul>
-            <li>Développeur Web</li>
-            <li>Designer Web</li>
-        </ul>
-    </div>
-    <button routerLink="/a-propos"> À Propos </button>
+            
+                <div class="text-network-bloc">
+                
+                    <span class="greetings">Salut, je m'appelle </span>
+                    <span class="name"> Samuel Mandeng </span>
+                    <div class="work"> 
+                        <span>je suis un </span>
+                        <span id="typewriter"></span>
+                    </div>
 
+                    
+                        
+                    <button>
+
+                        <a  href="https://drive.google.com/file/d/1270LhSlQntvSgBWDzf0rL0qNXKpya-lb/view?usp=sharing" 
+                            aria-label="Cv" 
+                            rel="noopener" 
+                            target="_blank">
+                            Téléchargez cv
+                        </a>
+                        <fa-icon [icon]=faDownload></fa-icon>
+
+                    </button>
+                        
+                    <div class="networks">
+                            
+                        <div class="network-icon linkedin" (click)="openNetwork('linkedin')"></div>
+                        <div class="network-icon github" (click)="openNetwork('github')"></div>
+                        <div class="network-icon instagram" (click)="openNetwork('instagram')"></div>
+
+                    </div>
+
+                </div>  
+                <img src="../../../assets/img/moi-hero-banner.png" alt="Image of Samuel Mandeng" class="hero-image">
+            </div>
+        </section>
+        
+        <section class="about" id="a-propos">
+
+            <div class="content my-container">
+
+                <span class="title">À Propos</span>
+                <div class="text-image">
+
+                    <img src="../../../assets/img/moi.jpeg" alt="illustration of a digital solutions">
+
+                    <div class="text">
+                        <span>
+                            Je suis un développeur fullstack js web basé à Rennes. Je conçois et développe des sites et applications web en m'outillant de ma créativité sans jamais faire de compromis sur la qualité.
+                        </span>
+
+                        <span>Que vous soyez un particulier, une startup ou une entreprise établie cherchant à franchir l'étape numérique, je travaillerai avec vous pour créer des solutions digitales innovantes dont vous avez besoin pour développer votre activité .</span>
+         
+                        <span>
+                            Je suis autonôme, travailleur et passionné. J'aime me frotter à de nouveaux défis. N'hésitez donc pas à me contacter afin qu'on atteigne ensemble vos objectifs. 
+                        </span>
+                    </div>
+
+
+            
+        <!--
+        
+                    <div class="video">
+        
+                       <vg-player>
+                    
+                            <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls [poster]="posterLink">
+                                <source src="https://drive.google.com/file/d/1OToGQyGPLUGbatjiUbrybyoXH_-DfVsp/preview" type="video/mp4">
+                            </video>
+        
+                        </vg-player>
+        
+                    </div>
+        -->
+        
+                </div>
+        
+                <div class="profil">
+        
+                    <div class="profil-bloc">
+        
+                        <div class="profil-nav">
+                            <span class="profil-header active-header" (click) = "activeContent(0)">Compétences</span>
+                            <span class="profil-header" (click) = "activeContent(1)">Formation</span>
+                        </div>
+        
+                            <div class="profil-content">
+            
+                                <div class="profil-info technos">
+                                    <div class="profil-info-conteneur">
+                                        <div class="skills">
+                                            <span class="skills-title">Front-End</span>
+                                            <div class="images-logo">
+                                                
+                                                <div>
+                                                    <img src="../../../assets/img/logos/angular_logo.png" alt="angular logo">
+                                                    <span>Angular</span>
+                                                </div>
+                
+                                                <div>
+                                                    <img src="../../../assets/img/logos/bootstrap_logo.png" alt="bootstrap logo">
+                                                    <span>Bootstrap</span>
+                                                </div>
+                
+                                                <div>
+                                                    <img src="../../../assets/img/logos/scss_logo.png" alt="Scss logo">
+                                                    <span>Saas</span>
+                                                </div>
+                
+                                                <div>
+                                                    <img src="../../../assets/img/logos/primeng_logo.png" alt="Scss logo">
+                                                    <span>Prime NG</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="skills">
+                                            <span class="skills-title">Back-End</span>
+                                            <div class="images-logo">
+                                                <div>
+                                                    <img src="../../../assets/img/logos/node_logo.png" alt="Node js logo">
+                                                    <span>Node js</span>
+                                                </div>
+                
+                                                <div>
+                                                    <img src="../../../assets/img/logos/express_logo.png" alt="Express js logo">
+                                                    <span>Express js</span>
+                                                </div>
+                
+                                                <div>
+                                                    <img src="../../../assets/img/logos/nodemailer_logo.png" alt="Nodemailer logo">
+                                                    <span>Nodemailer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                        <div class="skills">
+                                            <span class="skills-title">Base de donées</span>
+                                            <div class="images-logo">
+                                                <div>
+                                                    <img src="../../../assets/img/logos/mongodb_logo.png" alt="MongoDB logo">
+                                                    <span>MongoDB</span>
+                                                </div>
+                
+                                                <div>
+                                                    <img src="../../../assets/img/logos/postgres_logo.png" alt="Postgresql js logo">
+                                                    <span>PostgreSQL</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="skills">
+                                            <span class="skills-title">Design</span>
+                                            <div class="images-logo">
+                                                <div>
+                                                    <img src="../../../assets/img/adobe.png" alt="Adobe XD logo">
+                                                    <span>Adobe XD</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>               
+            
+                                <div class="formation profil-info ">
+                                    <img src="../../../assets/img/hat.png" alt="chapeau de diplômant">
+                                    <div class="formation-conteneur">
+                                        <div class="formation-element">
+                                            <span><fa-icon [icon]=faCalendarAlt></fa-icon><span>2016 - 2019</span></span>
+                                            <span class="formation-title">Cycle d'Ingénierie Informatique (3iL)</span>
+                                            <span class="formation-description">Conception et développement de système d’information</span>
+                                        </div>
+                
+                                        <div class="formation-element">
+                                            <span><fa-icon [icon]=faCalendarAlt></fa-icon><span>2014 - 2016</span></span>
+                                            <span class="formation-title">Classes préparatoires (Prépa 3iL)</span>
+                                            <span class="formation-description">Informatique, mathématiques, physiques</span>
+                                        </div>
+                
+                                        <div class="formation-element">
+                                            <span class="formation-title">Langues</span>
+                                            <span class="langue">Français ( langue maternelle )</span>
+                                            <span class="langue">Anglais ( technique )</span>
+                                        </div>
+                                    </div>
+                                </div>
     
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        
+        <section class="services" id="services">
+
+            <div class="content my-container">
+                <span class="title">Services</span>
+                <span class="speach">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatum aperiam distinctio quis non maiores cumque ullam perspiciatis unde placeat. Eos eligendi fugit accusantium reiciendis sit sunt labore sequi quos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatum aperiam distinctio quis non maiores cumque ullam perspiciatis unde placeat. Eos eligendi fugit accusantium reiciendis sit sunt labore sequi quos!</span>
+                <div class="services-list">
+                    <div class="service">
+                        <fa-icon [icon]=faPalette></fa-icon>
+                        <span class="service-title">Web Designer UI</span>
+                        <span>
+                            L’identité graphique de votre entreprise est le cœur de votre stratégie de communication
+                        </span>
+                    </div>
+                    <div class="service">
+                        <fa-icon [icon]=faCode></fa-icon>
+                        <span class="service-title">Création Site Web</span>
+                        <span>
+                            Pour présenter votre entreprise, vos produits et vos services. Responsive, au design moderne, prêt pour le référencement et pensé avant tout pour l'utilisateur pour un site internet qui génère des prospects.
+                        </span>
+                    </div>
+                    <div class="service">
+                        <fa-icon [icon]=faRocket></fa-icon>
+                        <span class="service-title">Reférencement SEO</span>
+                            <span>
+                                Devenez vraiment visible sur Google auprès des internautes qui recherchent vos services chaque jour sur internet.
+                            </span>
+                    </div>
+
+            <!-- Bloc Formation
+                    <div class="service">
+                        <fa-icon [icon]=faChalkboardTeacher></fa-icon>
+                        <span class="service-title">Formation</span>
+                        <span>
+                            Je propose des formations sur l'utilisation de votre site internet pour que vous puissiez le faire évoluer. Pas besoin de payer indéfiniment une "maintenance" de votre site !
+                        </span>
+                    </div>
+            -->
+                </div>
+            </div>
+<!--
+            <div class="call-bloc">
+                <div class="call my-container">
+                    <span>Si vous avez un projet en tête</span>
+                    <button>Parlons-en</button>
+                </div>   
+            </div>
+-->
+
+        </section>
+        
+        <section class="projects" id="projets">
+            <div class="content my-container">
+                <span class="title">Mes Réalisations</span>
+                <span class="summary">Retrouvez ici quelques une de mes réalisations.</span>
+
+                <div class="project-list">
+
+                    <div class="project" *ngFor="let project of projectList">
+                        <div class="project-image">
+                            <img src={{project.projectImage}} alt={{project.projectImageAltAttribute}} />
+                        </div>
+                        <span class="project-title">{{project.projectTitle}}</span>
+                        <span class="project-summary">{{project.projectSummary}}</span>
+                        <!--- <button (click)='goOnSscovid()'>Voir plus</button> -->
+
+                        <button (click)="showProject(project.projectCode)">Voir plus</button>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        
+        <section class="contact" id="contact">
+        
+            <div class="content my-container">
+                <span class="title">Contactez-moi</span>
+                <span class="speach">Vous pouvez me contacter par le moyen qui vous sied le mieux parmis ceux indiqués ci-après .</span>
+                <span>Faisons connaissance et développons votre projet ensemble, dès maintenant .</span>
+        
+                <div class="contact-info">
+                    <div class="personal-id">
+                        <div class="tel">
+        
+                            <div class="img-bloc">
+                                <fa-icon [icon]="faPhone"></fa-icon>
+                            </div>
+        
+                            <div class="text-bloc">
+                                <span class="titles">Téléphone</span>
+                                <span class="text">+33 783189171</span>
+                            </div>
+                            
+                        </div>
+            
+                        <div class="mail">
+                            <div class="img-bloc">
+                                <fa-icon [icon]="faEnvelope"></fa-icon>
+                            </div>
+                            <div class="text-bloc">
+                                <span class="titles">Email</span>
+                                <span class="text">manduel21@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmitContactForm()">
+                        <div class="name-email">
+                            <div class="name-bloc">
+                                <input formControlName="name" id="name-input" type="text" placeholder="Nom">
+                                <label class="label-id"for="name">Nom</label>
+                                <div *ngIf="isContactFormSubmitted && f.name.errors" class="invalid-feedback">
+                                    <div *ngIf="f.name.errors.required">Renseignez votre nom</div>
+                                </div>
+                            </div>
+                            <div class="email-bloc">
+                                <input formControlName="email" id="email-input" type="text" placeholder="Email">
+                                <label class="label-id" for="email">Email</label>
+                                <div *ngIf="isContactFormSubmitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="f.email.errors.required">Renseignez l'addresse mail</div>
+                                    <div *ngIf="f.email.errors.email">Addresse mail invalide</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="objet-bloc">
+                            <input formControlName="subject" id="objet-input" type="text" placeholder="Objet">
+                            <label class="label-id" for="objet-input">Objet</label>
+                        </div>
+        
+                        <div class="message-bloc">
+                            <textarea formControlName="message" id="message-area" type="text" placeholder="Message"></textarea>
+                            <label class="label-id" for="message-area">Message</label>
+                            <div *ngIf="isContactFormSubmitted && f.message.errors" class="invalid-feedback">
+                                <div *ngIf="f.message.errors.required">Message absent</div>
+                                <div *ngIf="f.message.errors.minlength">Votre message est trop court </div>
+                            </div>
+                        </div>
+        
+                        <button type="submit" >
+                            <ng-container *ngIf="isContactFormSubmittedAndNotErrorOnClientSide; else defaultText">
+                                <p-progressSpinner [style]="{width: '20px', height: '20px'}" strokeWidth="8"></p-progressSpinner>
+                            </ng-container>
+                        </button>
+                    </form>
+                    <ng-template #defaultText>Envoyer <fa-icon [icon]="faPaperPlane"></fa-icon></ng-template>
+                </div>
+            </div>
+            <p-toast [breakpoints]="{'920px': {width: '100%', right: '0', left: '0', backgroung:'red'}}"></p-toast>
+        
+        </section>
+
 </div>
+

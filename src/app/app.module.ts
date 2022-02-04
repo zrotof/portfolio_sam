@@ -11,38 +11,32 @@ import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
 import { HomeComponent } from './components/home/home.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { ServicesComponent } from './components/services/services.component';
-import { AboutComponent } from './components/about/about.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { Sscovid19Component } from './components/sscovid19/sscovid19.component';
-import { HeaderComponent } from './components/header/header.component';
 import { ElitesvComponent } from './components/elitesv/elitesv.component';
 import { CasabreizhComponent } from './components/casabreizh/casabreizh.component';
 import { FootComponent } from './components/foot/foot.component';
+import { HeaderComponent } from './components/header/header.component';
 
 import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 import {RippleModule} from 'primeng/ripple';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
     HomeComponent,
-    ProjectsComponent,
-    ContactComponent,
-    ServicesComponent,
-    AboutComponent,
     NotFoundComponent,
     Sscovid19Component,
-    HeaderComponent,
     ElitesvComponent,
     CasabreizhComponent,
-    FootComponent
+    FootComponent,
+    HeaderComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -57,8 +51,11 @@ import {RippleModule} from 'primeng/ripple';
     ReactiveFormsModule,
     ToastModule,
     ButtonModule,
-    RippleModule
+    RippleModule,
+    DynamicDialogModule,
+    ProgressSpinnerModule
   ],
+  entryComponents:[Sscovid19Component, ElitesvComponent, CasabreizhComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

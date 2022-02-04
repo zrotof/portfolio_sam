@@ -14,9 +14,18 @@
     
 }
 
+html{
+    scroll-behavior: smooth ;
+}
+
 input,
 a,
 button,
 div{
     -webkit-tap-highlight-color: transparent;
+}
+
+.my-container{
+    max-width: 1200px;
+    padding: 10px 20px;
 }

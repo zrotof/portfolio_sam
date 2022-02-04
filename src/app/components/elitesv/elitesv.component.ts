@@ -18,7 +18,7 @@ export class ElitesvComponent implements OnInit {
   ngOnInit(): void {
   }
   goOnProjectsList(){
-    this.router.navigate(['réalisations']);
+    this.router.navigate(['accueil']);
   }
 
   goOnElitesVoyagesWebsite(){

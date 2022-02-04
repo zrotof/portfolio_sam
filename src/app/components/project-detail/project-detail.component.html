@@ -1,0 +1,83 @@
+<div class="project">
+    
+    <div class="content my-container">
+
+        <div class="description">
+            <img src={{project.image}} alt="Logo of sscovid19 website">
+            
+            
+            <span class="description-title">Description</span>
+            
+            <div class="who">
+                <span *ngFor="let who of project.who" [innerHtml]="who.message"></span>
+            </div>
+
+            <div class="why">
+                <span *ngFor="let why of project.why">{{why.message}}</span>
+            </div>
+
+            <div class="requirements">
+                <span>{{project.requirement_intro}}</span>
+                <ul>
+                    <li *ngFor="let requirement of project.requirements">
+                        {{requirement.message}}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="estate">
+                <span>
+                    <b>État : </b>
+                </span>
+                <span>{{project.estate}}</span>
+            </div>
+                
+
+                <button (click)="goOnSscovidWebsite(project.link)">Visitez le site</button>
+
+        </div>    
+
+
+        <div class="technos-bloc">
+            <span class="title">Technologies utilisées</span>
+
+
+            <div class="technos">
+                <div class="techno">
+                    <img src="../../../assets/img/logos/angular_logo.png" alt="angular logo">
+                    <span>Angular 11</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/node_logo.png" alt="node js logo">
+                    <span>Node js</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/express_logo.png" alt="express logo">
+                    <span>Express js</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/postgres_logo.png" alt="postgresql logo">
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/amcharts_logo.png" alt="amchartlogo">
+                    <span>AmCharts</span>
+                </div>
+
+                <div class="techno">
+                    <img src="../../../assets/img/logos/google_analytics_logo.png" alt="google analytics logo">
+                    <span>Google Analytics</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/heroku_logo.png" alt="heroku logo">
+                    <span>Heroku</span>
+                </div>
+                <div class="techno">
+                    <img src="../../../assets/img/logos/hostinger_logo.png" alt="angular-logo">
+                    <span>Hostinger</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
