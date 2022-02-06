@@ -55,6 +55,7 @@ export class HeaderComponent implements OnInit {
   onBurgerMenu(){
     let navSmallScreen = <HTMLElement>document.querySelector('nav');
     let inputstatus = <HTMLInputElement>document.querySelector('.burger input');
+    let burgerParent = <HTMLElement>document.querySelector('.burger');
     let header = <HTMLElement>document.querySelector('header');
     // À chaque clique sur l'input on vérifie si l'input est cochée
     if(inputstatus.checked === true){
@@ -65,7 +66,7 @@ export class HeaderComponent implements OnInit {
         header.classList.add('navbar-background-on-scroll');
       }
       this.isBurgerMenuClicked = true;
-
+      burgerParent.style.background = '#FFCC00';
     }
     else{
       navSmallScreen.classList.toggle("toggle-nav");
@@ -74,6 +75,7 @@ export class HeaderComponent implements OnInit {
       if (window.pageYOffset <= header.clientHeight) {
         header.classList.remove('navbar-background-on-scroll');
       }
+      burgerParent.style.background = 'inherit';
 
     }
   }
@@ -132,8 +134,6 @@ export class HeaderComponent implements OnInit {
 
     this.router.events.pipe(first()).subscribe( event => {
       if(event instanceof NavigationEnd){
-
-
 
      var nav = this.router.url
 
@@ -203,6 +203,14 @@ export class HeaderComponent implements OnInit {
 
 //Navigate to an anchor
   navigateToAnchor(targetAnchor: string){
+
+
+    if(this.isBurgerMenuClicked === true){
+     this.onBurgerMenu();
+
+    }
+
+
     this.router.navigate([], { fragment: targetAnchor });
   }
 

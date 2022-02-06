@@ -232,17 +232,19 @@ header{
                     position: relative;
                     z-index: 10;
                     user-select: none;
-                    height: 30px;  
-                    width: 30px;          
+                    height: 40px;  
+                    width: 40px;    
+                    padding: 5px;      
                     font-size: 2em;
                     font-weight: bold;
-                
+                    border-radius: 50%;
+
                     input{
                         display: block;
-                        width: 100%;
-                        height: 100%;
+                        width: 30px;
+                        height: 30px;
                         position: absolute;
-                        top: 0;
+                        top: 5px;
                         cursor: pointer;
                         opacity: 0; /* hide this */
                         z-index: 2; /* and place it over the hamburger */
@@ -258,7 +260,7 @@ header{
         
                     span{
                         display: block;
-                        width: 100%;
+                        width: 30px;
                         height: 3px;
                         position: relative;
                         
@@ -276,14 +278,11 @@ header{
                      
         
                         input:checked ~ span{
-                            opacity: 1;
-                            background: white;
-        
+                            opacity: 1;        
                         }
         
                         input:checked ~ span:nth-last-child(1){
                             transform: rotate(-45deg) translate(3.5px, 3.5px);
-        
                         }
             
                         input:checked ~ span:nth-last-child(2)

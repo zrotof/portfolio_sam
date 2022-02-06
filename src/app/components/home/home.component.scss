@@ -10,7 +10,6 @@ $colorYellow: #FFCC00;
     flex-direction: column;
     justify-content: center;
 
-    
         .hero{
 
             width: 100%;
@@ -1293,6 +1292,16 @@ $colorYellow: #FFCC00;
             }
         }
 
+        .services{
+
+            .content{
+                .speach{
+                    font-size: 1.05em;
+                }
+            }
+
+        }
+
         .contact{
          
             .content{
@@ -1410,15 +1419,20 @@ $colorYellow: #FFCC00;
 
 }
 
-@media all and (max-width: 327px){
-    .home{
-        .greetings{
-           font-size: 1.5em;
-            .name{
-                font-size: 1.2em;
-                padding:0 5px;
-            }
+@media all and (max-width: 320px){
+    .app{
 
+        .hero{
+            .content{
+
+                .text-network-bloc{
+
+                    .name{
+                        font-size: 2.25rem;
+                    }
+
+                }
+            }
         }
     }
 
