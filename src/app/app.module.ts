@@ -9,12 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { Sscovid19Component } from './components/sscovid19/sscovid19.component';
-import { ElitesvComponent } from './components/elitesv/elitesv.component';
-import { FootComponent } from './components/foot/foot.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 import {ButtonModule} from 'primeng/button';
@@ -28,12 +25,9 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
     
     AppComponent,
     HomeComponent,
-    NotFoundComponent,
-    Sscovid19Component,
-    ElitesvComponent,
-    FootComponent,
     HeaderComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -40,15 +40,12 @@ export class HeaderComponent implements OnInit {
   currentAnchorTag ="accueil";
 
   constructor(
-    private route: ActivatedRoute, 
     private router: Router) 
     { }
 
   ngOnInit(): void {
     
     this.redirectOnLoad();
-
-
   }
 
   //Handling click on burger menu

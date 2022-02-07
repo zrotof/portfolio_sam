@@ -105,21 +105,21 @@ $colorYellow: #FFCC00;
                     }
 
                     .linkedin{
-                        background-image: url("../../../assets/img/linkedin.png");
+                        background-image: url("../../../assets/img/logos/linkedin.png");
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
                         margin-top: 20px;
                     }
                     .linkedin:hover{
-                        background-image: url("../../../assets/img/linkedin-color.png");
+                        background-image: url("../../../assets/img/logos/linkedin-color.png");
                         background-color: inherit;
                         transform: scale(1.5);
 
                     }
 
                     .github{
-                        background-image: url("../../../assets/img/github.png");
+                        background-image: url("../../../assets/img/logos/github.png");
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -128,13 +128,13 @@ $colorYellow: #FFCC00;
                     }
 
                     .github:hover{
-                        background-image: url("../../../assets/img/github-color.png");
+                        background-image: url("../../../assets/img/logos/github-color.png");
                         background-color: inherit;
                         transform: scale(1.5);
                     }
 
                     .instagram{
-                        background-image: url("../../../assets/img/instagram.png");
+                        background-image: url("../../../assets/img/logos/instagram.png");
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -143,7 +143,7 @@ $colorYellow: #FFCC00;
                     }
 
                     .instagram:hover{
-                        background-image: url("../../../assets/img/instagram-color.png");
+                        background-image: url("../../../assets/img/logos/instagram-color.png");
                         background-color: inherit;
                         transform: scale(1.3);
                     }
@@ -521,7 +521,6 @@ $colorYellow: #FFCC00;
           
             .content{
                 width: 100%;
-                margin: 0 55px;
                 height: 100%;
                 display: flex;
                 flex-direction: column;

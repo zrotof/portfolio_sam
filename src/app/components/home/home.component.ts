@@ -17,10 +17,6 @@ import {DynamicDialogRef} from 'primeng/dynamicdialog';
 
 import Typewriter from 'typewriter-effect/dist/core';
 
-import { Sscovid19Component } from '../sscovid19/sscovid19.component';
-import { CasabreizhComponent } from '../casabreizh/casabreizh.component';
-import { ElitesvComponent } from '../elitesv/elitesv.component';
-
 import { faHome, faUserAlt, faSuitcase, faListAlt,faPhone,faMapMarkerAlt,faLanguage,faDownload,faCalendarAlt,faFutbol,faGuitar,faEnvelope,faPaperPlane,faLaptop,faCode,faRocket, faPalette, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 import { ProjectDetailComponent } from '../project-detail/project-detail.component';
 
@@ -33,10 +29,6 @@ import { ProjectDetailComponent } from '../project-detail/project-detail.compone
 })
 export class HomeComponent implements OnInit {
 
-  faHome = faHome;
-  faUserAlt = faUserAlt;
-  faSuitcase = faSuitcase; 
-  faListAlt = faListAlt;
   faPhone= faPhone;
   faMapMarkerAlt = faMapMarkerAlt;
   faLanguage = faLanguage;
@@ -118,6 +110,13 @@ posterLink = "../../../assets/img/sscovid19.png";
 
   }
 
+//Funtions that will give us our project list
+
+getAllProject(){
+  this.projectList = this.projectsService.initProjectsListBriefData();
+}
+
+
 //this function is used to redirect to the right project cliccked
 //For this we will vérify if the given parameter is known inside our projects,
 //If so we call our reusable modal 
@@ -144,7 +143,7 @@ showProject(param: string) {
 
     });
 
-  }
+}
 
 
 typeWriter(){
@@ -164,27 +163,11 @@ ngOnDestroy() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Function used in about section
-  //The fucntion will set the clicked header and set the right content to display
-  //We remove the active class on headers and set it to the clicked one
-  //We disable display from content and only displaying the good one
-  activeContent(param:number){
+//  The fucntion will set the clicked header and set the right content to display
+//  We remove the active class on headers and set it to the clicked one
+//  We disable display from content and only displaying the good one
+activeContent(param:number){
 
     if(param != this.currentContent){
 
@@ -209,17 +192,7 @@ ngOnDestroy() {
 
 
 
-  }
-
-
-
-
-//Funtions that will give us our project list
-
-getAllProject(){
-  this.projectList = this.projectsService.initProjectsListBriefData();
 }
-
 
 
 
