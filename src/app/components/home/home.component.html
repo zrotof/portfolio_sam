@@ -1,10 +1,10 @@
 <div class="app">
+    
 
         <section class="hero" id="accueil">
-            
-            <div class="content my-container">
 
-                <div class="text-network-bloc">
+            <div class="content my-container">
+               <div class="text-network-bloc">
                 
                     <span class="greetings">Salut, je m'appelle </span>
                     <span class="name"> Samuel Mandeng </span>
@@ -183,28 +183,42 @@
 
             <div class="content my-container">
                 <span class="title">Services</span>
-                <span class="speach">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatum aperiam distinctio quis non maiores cumque ullam perspiciatis unde placeat. Eos eligendi fugit accusantium reiciendis sit sunt labore sequi quos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatum aperiam distinctio quis non maiores cumque ullam perspiciatis unde placeat. Eos eligendi fugit accusantium reiciendis sit sunt labore sequi quos!</span>
+                
                 <div class="services-list">
                     <div class="service">
                         <fa-icon [icon]=faPalette></fa-icon>
                         <span class="service-title">Web Designer UI</span>
-                        <span>
+                        <p>
                             L’identité graphique de votre entreprise est le cœur de votre stratégie de communication
-                        </span>
+                        </p>
+   
                     </div>
                     <div class="service">
                         <fa-icon [icon]=faCode></fa-icon>
                         <span class="service-title">Création Site Web</span>
-                        <span>
-                            Pour présenter votre entreprise, vos produits et vos services. Responsive, au design moderne, prêt pour le référencement et pensé avant tout pour l'utilisateur pour un site internet qui génère des prospects.
-                        </span>
+                        <p>
+                            Vous souhaitez vous rendre visible sur Internet ? 
+                        </p>
+                        <p>
+                            Votre site web existant ne correspond plus à vos attentes et à celles de vos clients? 
+                        </p>
+                        <p>
+                            Vous avez un site vitrine et désirez vous lancer dans une activité e-commerce ?
+                        </p>
+                        <p>
+                            Nous travaillerons ensemble dans la réalisation de votre site web.
+                        </p>
+                        
                     </div>
                     <div class="service">
                         <fa-icon [icon]=faRocket></fa-icon>
                         <span class="service-title">Reférencement SEO</span>
-                            <span>
+                            <p>
                                 Devenez vraiment visible sur Google auprès des internautes qui recherchent vos services chaque jour sur internet.
-                            </span>
+                            </p>
+                            <p>
+                                 Votre site est déjà en ligne et vous souhaitez améliorer son positionnement web ? Il n'est pas trop tard pour optimiser son référencement naturel.
+                            </p>
                     </div>
 
             <!-- Bloc Formation
@@ -304,7 +318,7 @@
                             <textarea formControlName="message" id="message-area" type="text" placeholder="Message"></textarea>
                             <label class="label-id" for="message-area">Message</label>
                             <div *ngIf="isContactFormSubmitted && f.message.errors" class="invalid-feedback">
-                                <div *ngIf="f.message.errors.required">Message absent</div>
+                                <div *ngIf="f.message.errors.required">Message manquant</div>
                                 <div *ngIf="f.message.errors.minlength">Votre message est trop court </div>
                             </div>
                         </div>

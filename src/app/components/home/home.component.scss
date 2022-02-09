@@ -1,4 +1,4 @@
-$colorBlue: #00011e;
+$colorBlue: #00011f;
 $colorRed: #FF3100;
 $background: #f3f3f3;
 $colorYellow: #FFCC00;
@@ -17,13 +17,19 @@ $colorYellow: #FFCC00;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: $colorBlue;    
+            color: $colorBlue;  
+         
+            position: relative;
+            overflow: hidden;
+            
             
             .content{
                 display: flex;
                 justify-content: space-around;
                 align-items: center;    
                 width: 100%;
+                z-index: 1;
+
 
                 .text-network-bloc{
 
@@ -152,7 +158,7 @@ $colorYellow: #FFCC00;
                 }
 
                 img{
-                    width: 350px;
+                    width: 400px;
                 }
 
             }
