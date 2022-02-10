@@ -61,6 +61,21 @@ $colorYellow: #FFCC00;
                     .name{
                         font-weight: 700;
                         font-size: 2.5rem;
+
+                        .prenom{
+                            display:inline-block;
+                        }
+
+                        .prenom::first-letter,
+                        .nom::first-letter{
+                            font-style: normal;
+                        }
+
+                        .nom{
+                            display:inline-block;
+                            margin-left: 8px;
+                        }
+
                     }
                 
                     .work{
@@ -399,8 +414,15 @@ $colorYellow: #FFCC00;
             align-items: center;
             color: $colorBlue;
             background-color: #dddddd;
+            overflow: hidden;
+            position: relative;
+            padding-top: 100px;
 
-
+            svg{
+                position:absolute;
+                left:0;
+                top: -2px;
+            }
             .content{
                 width: 100%;
                 margin: 0 55px;
@@ -1309,11 +1331,14 @@ $colorYellow: #FFCC00;
                         padding: 15px 10px;
                         .name{
                             font-size: 2.05rem;
+
+                            
                         }
 
 
                         .i-do{
                             font-size: 0.9em;
+                            text-align: justify;
                         }
 
 

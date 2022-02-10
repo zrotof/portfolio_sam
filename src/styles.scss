@@ -48,8 +48,8 @@ div{
 .title::before{
     content: "";
     position: absolute;
-    width: 2.5em;
-    height: 1px;
+    width: 2em;
+    height: 3px;
     bottom:0;
     border-bottom: 4px solid $colorYellow;
 }
