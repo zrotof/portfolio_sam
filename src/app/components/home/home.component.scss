@@ -18,23 +18,40 @@ $colorYellow: #FFCC00;
             justify-content: center;
             align-items: center;
             color: $colorBlue;  
-         
+            background: linear-gradient(283deg, #ffebb8bf 0%, #e3f2fd 100%);
             position: relative;
             overflow: hidden;
-            
+
+            svg{
+                position:absolute;
+                left:0;
+                bottom: 0;
+            }
             
             .content{
                 display: flex;
                 justify-content: space-around;
                 align-items: center;    
                 width: 100%;
-                z-index: 1;
+                
 
+                .text-network-content{
 
-                .text-network-bloc{
+                    position: relative;
+                    display: flex;
+
+                .text-network{
 
                     display: flex;
                     flex-direction: column;
+                    padding: 20px;
+                    max-width: 415px;
+                    background: rgba( 255, 255, 255, 0.35 );
+                    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );                    
+                    backdrop-filter: blur( 2px );
+                    border-radius: 5px;
+                    border: 1px solid rgba( 255, 255, 255, 0.18 );
+                    z-index: 3;
 
                     .greetings{
                 
@@ -43,7 +60,7 @@ $colorYellow: #FFCC00;
                     }
                     .name{
                         font-weight: 700;
-                        font-size: 3rem;
+                        font-size: 2.5rem;
                     }
                 
                     .work{
@@ -53,13 +70,18 @@ $colorYellow: #FFCC00;
                         font-weight: 330;
                 
                         #typewriter{
-                            color: $colorYellow;
+                            color: $colorRed;
                             margin-left: 5px;
                             font-weight: 500;
                             font-size: 1.5rem;
 
+
                         }
                         
+                    }
+
+                    .i-do{
+                        margin: 5px 0;
                     }
 
                     
@@ -68,7 +90,7 @@ $colorYellow: #FFCC00;
                 button{
                     padding: 6px 25px;
                     border-radius: 100px;
-                    margin-top: 20px;
+                    margin-top: 10px;
                     border: 1px solid $colorBlue;
                     cursor: pointer;
                     background-color: white;
@@ -100,65 +122,62 @@ $colorYellow: #FFCC00;
                 .networks{
                     display: flex;
                     align-items: center;
+                    justify-content: center;
 
-                    .network-icon{
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 50%;
-                        background-color: $colorBlue;
-
+                    .network{
+                        height: 34px;
+                        width: 34px;
                         cursor: pointer;
                     }
 
-                    .linkedin{
-                        background-image: url("../../../assets/img/logos/linkedin.png");
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        margin-top: 20px;
-                    }
-                    .linkedin:hover{
-                        background-image: url("../../../assets/img/logos/linkedin-color.png");
-                        background-color: inherit;
-                        transform: scale(1.5);
-
-                    }
-
-                    .github{
-                        background-image: url("../../../assets/img/logos/github.png");
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        margin: 20px 15px 0 15px;
-
-                    }
-
-                    .github:hover{
-                        background-image: url("../../../assets/img/logos/github-color.png");
-                        background-color: inherit;
-                        transform: scale(1.5);
-                    }
-
-                    .instagram{
-                        background-image: url("../../../assets/img/logos/instagram.png");
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        margin-top: 20px;
-
-                    }
-
-                    .instagram:hover{
-                        background-image: url("../../../assets/img/logos/instagram-color.png");
-                        background-color: inherit;
-                        transform: scale(1.3);
-                    }
                 }
+
+
+                
 
                 }
 
-                img{
-                    width: 400px;
+               
+                .circle-one{
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background: rgb(0,1,31);
+                    background: linear-gradient(332deg, rgba(0,1,31,1) 53%, rgba(255,204,0,1) 100%);                    
+                    position: absolute;
+                    top: -22px;
+                    right: -34px;
+                    z-index:  2;
+                }
+
+                .circle-two{
+                    background: rgb(238,174,202);
+                    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+                    position: absolute;
+                    bottom: -43px;
+                    left: -70px;
+                    z-index:  2;
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 50%;
+
+                }
+
+                .square-one{
+                    background: rgb(247 7 112 / 33%);                    position: absolute;
+                    bottom: 9px;
+                    right: -77px;
+                    z-index: 4;
+                    width: 262px;
+                    height: 28px;
+                    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+                    transform: rotate(120deg) translate(3.5px, 3.5px);
+                    border-radius: 40px;
+                }
+
+            }
+                .hero-image{
+                    width: 370px;
                 }
 
             }
@@ -894,42 +913,43 @@ $colorYellow: #FFCC00;
         .hero{
             .content{
 
-                .text-network-bloc{
+                .text-network-content{
+                    .text-network{
 
-                    .greetings{
-                
-                        font-size: 1.2rem;
-                        font-weight: 330;  
-                    }
-                    .name{
-                        font-weight: 700;
-                        font-size: 2.5rem;
-                    }
-                
-                    .work{
-                        display: flex;
-                        font-size: 1.2rem;
-                        margin-top: 5px;
-                        font-weight: 330;
-                
-                        #typewriter{
-                            color: $colorYellow;
-                            margin-left: 5px;
-                            font-weight: 500;
-                            font-size: 1.3rem;
-
+                        .greetings{
+                    
+                            font-size: 1.2rem;
+                            font-weight: 330;  
                         }
-                        
+                        .name{
+                            font-weight: 700;
+                            font-size: 2.5rem;
+                        }
+                    
+                        .work{
+                            display: flex;
+                            font-size: 1.2rem;
+                            margin-top: 5px;
+                            font-weight: 330;
+                    
+                            #typewriter{
+                                color: $colorYellow;
+                                margin-left: 5px;
+                                font-weight: 500;
+                                font-size: 1.3rem;
+
+                            }
+                            
+                        }
+
+                    button{
+                        margin-top: 10px;
                     }
 
-                button{
-                    margin-top: 10px;
+                    }
                 }
-
-                }
-
-                img{
-                    width: 300px;
+                .hero-image{
+                    width: 320px;
                 }
 
             }
@@ -980,9 +1000,79 @@ $colorYellow: #FFCC00;
         .hero{
             .content{
 
-                justify-content: space-between;
+                flex-direction: column-reverse;
+                justify-content: center;
+
+                .text-network-content{
+
+                    margin: 50px 0 150px 0;
+
+                    .text-network{
+
+                        display: flex;
+                        flex-direction: column;
+
+                        .greetings{
+                    
+                            font-size: 1.3rem;
+                            font-weight: 330;  
+                        }
+                        .name{
+                            font-weight: 700;
+                            font-size: rem;
+                        }
+                    
+                        .work{
+                            display: flex;
+                            font-size: 1.3rem;
+                            margin-top: 5px;
+                            font-weight: 330;
+                    
+                            #typewriter{
+                                color: $colorYellow;
+                                margin-left: 5px;
+                                font-weight: 500;
+                                font-size: 1.5rem;
+
+                            }
+                            
+                        }
+
+                        
 
                 
+                        button{
+                            padding: 6px 25px;
+                            width: fit-content;
+                            font-size: 1.1em;
+
+                            margin: 0 auto;
+                            margin-top: 20px;
+
+                            a{
+                                text-decoration: none;
+                                margin-right: 10px;
+                                color: $colorBlue;
+                            }
+                    
+                        }
+                    
+                        button:hover{
+                            background-color: $colorBlue ;
+                            transition: all 0.5s ease 0s;
+                            color: $colorYellow;
+
+                            a{
+                                color: $colorYellow;
+                            }
+                        }
+
+                    }
+                }
+                .hero-image{
+                    margin-top: 150px;
+                }
+
             }
         }
 
@@ -1035,93 +1125,6 @@ $colorYellow: #FFCC00;
 
 }
 
-@media all and (max-width: 750px){
-    .app{
-
-        .hero{
-            .content{
-
-                flex-direction: column-reverse;
-                justify-content: space-between;
-
-                .text-network-bloc{
-
-                    display: flex;
-                    flex-direction: column;
-
-                    .greetings{
-                
-                        font-size: 1.3rem;
-                        font-weight: 330;  
-                    }
-                    .name{
-                        font-weight: 700;
-                        font-size: 3rem;
-                    }
-                
-                    .work{
-                        display: flex;
-                        font-size: 1.3rem;
-                        margin-top: 5px;
-                        font-weight: 330;
-                
-                        #typewriter{
-                            color: $colorYellow;
-                            margin-left: 5px;
-                            font-weight: 500;
-                            font-size: 1.5rem;
-
-                        }
-                        
-                    }
-
-                    
-
-            
-                    button{
-                        padding: 6px 25px;
-                        width: fit-content;
-                        font-size: 1.1em;
-
-                        margin: 0 auto;
-                        margin-top: 20px;
-
-                        a{
-                            text-decoration: none;
-                            margin-right: 10px;
-                            color: $colorBlue;
-                        }
-                
-                    }
-                
-                    button:hover{
-                        background-color: $colorBlue ;
-                        transition: all 0.5s ease 0s;
-                        color: $colorYellow;
-
-                        a{
-                            color: $colorYellow;
-                        }
-                    }
-
-                    .networks{
-                        display: flex;
-                        align-items: center;
-                        margin: 0 auto;
-                        
-                        
-                    }
-
-                }
-
-                img{
-                    margin: 50px 0;
-                }
-
-            }
-        }
-    }
-}
 
 @media all and (max-width: 550px){
     
@@ -1130,42 +1133,48 @@ $colorYellow: #FFCC00;
         .hero{
             .content{
 
-                .text-network-bloc{
+                .text-network-content{
 
-                    .greetings{
-                        font-size: 1.2rem;
-                    }
+                    
+                    
+                    .text-network{
+                        padding: 15px;
+                        max-width: 369px;
 
-                    .name{
-                        font-size: 2.5rem;
-                    }
-                
-                    .work{
-                        font-size: 1.2rem;
-                
-                        #typewriter{
-                            font-size: 1.4rem;
-                        }
-                        
-                    }
-
-                    button{
-                        font-weight: 510;
-                    }
-
-                    .networks{
-
-                        .network-icon{
-
-                            margin-top: 15px;
+                        .greetings{
+                            font-size: 1.2rem;
                         }
 
-                    }
+                        .name{
+                            font-size: 2.3rem;
+                        }
+                    
+                        .work{
+                            font-size: 1.2rem;
+                    
+                            #typewriter{
+                                font-size: 1.4rem;
+                            }
+                            
+                        }
 
+                        button{
+                            font-weight: 510;
+                        }
+
+                        .networks{
+
+                            .network-icon{
+
+                                margin-top: 15px;
+                            }
+
+                        }
+
+                    }
                 }
-
-                img{
-                    width: 250px;
+                .hero-image{
+                    width: 270px;
                 }
 
             }
@@ -1394,48 +1403,31 @@ $colorYellow: #FFCC00;
     }
 }
 
-
-@media all and (max-width: 465px){
-    .home{
-        .greetings{
-            display: flex;
-            flex-direction: column;
-            font-size: 1.7em;
-
-            .name{
-                font-size: 1.3em;
-            }
-
-        }
-    }
-
-}
-
-@media all and (max-width: 356px){
-    .home{
-        .greetings{
-          
-            .name{
-                font-size: 1.2em;
-            }
-
-        }
-    }
-
-}
-
-@media all and (max-width: 320px){
+@media all and (max-width: 425px){
     .app{
 
         .hero{
             .content{
 
-                .text-network-bloc{
+                .text-network-content{
 
-                    .name{
-                        font-size: 2.25rem;
+                    margin: 20px 0 100px 0;
+
+                    .text-network{
+
+                        padding: 15px 10px;
+                        .name{
+                            font-size: 2.05rem;
+                        }
+
+
+                        .i-do{
+                            font-size: 0.9em;
+                        }
+
+
+
                     }
-
                 }
             }
         }
@@ -1443,22 +1435,31 @@ $colorYellow: #FFCC00;
 
 }
 
-@media all and (max-width: 300px){
-    .home{
-        .work{
-            flex-direction: column;
-            width: 100%;
-            align-items: center;
 
-            ul{
-                padding-left: 0;
+@media all and (max-width: 330px){
+    .app{
+
+        .hero{
+            .content{
+
+                .text-network-content{
+                    .text-network{
+
+                        .name{
+                            font-size: 1.9rem;
+                        }
+
+                        .work{
+
+                            #typewriter{
+                                font-size: 1.1em;
+                            }
+                        }
+
+                    }
+                }
             }
         }
     }
 
 }
-
-
-
-
-

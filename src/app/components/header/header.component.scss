@@ -54,13 +54,16 @@ header{
                             color: $colorBlue;
                             border-radius: 100px;
                             cursor: pointer;
+                        }
 
+                        a:hover{
+                            color: $colorRed;
+                            font-weight: 500;
                         }
 
                         .active-link{
                             background-color: $colorBlue;
                             color: $colorYellow;
-
                         }
 
                         
