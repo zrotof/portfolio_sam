@@ -10,7 +10,7 @@ header{
     width: 100%;
     position: fixed;
     height: 5.5em;
-    z-index: 2;
+    z-index: 999;
 
     .content{
         display: flex;
@@ -194,6 +194,10 @@ header{
 
                         li{
                             margin: 20px 0 0 0;
+
+                            a{
+                                font-size: 1.1em;
+                            }
                            
                         }    
 

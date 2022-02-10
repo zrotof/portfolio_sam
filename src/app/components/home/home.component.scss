@@ -70,7 +70,7 @@ $colorYellow: #FFCC00;
                         font-weight: 330;
                 
                         #typewriter{
-                            color: $colorRed;
+                            color: $colorYellow;
                             margin-left: 5px;
                             font-weight: 500;
                             font-size: 1.5rem;
@@ -198,22 +198,6 @@ $colorYellow: #FFCC00;
                 width: 100%;
                     
                 flex-direction: column;
-
-
-                .title{
-                    font-size: 1.9em;
-                    font-weight: bold;
-                    position: relative;
-                }
-            
-                .title::before{
-                    content: "";
-                    position: absolute;
-                    width: 3em;
-                    height: 1px;
-                    bottom:0;
-                    border-bottom: 4px solid $colorYellow;
-                }
         
                 .text-image{
                     display: flex;
@@ -339,8 +323,8 @@ $colorYellow: #FFCC00;
                                                 margin: 10px 20px;
             
                                                 img{
-                                                    width: 50px;
-                                                    height:50px;
+                                                    width: 35px;
+                                                    height: 35px;
                                                 }
                                                 span{
                                                     text-align: center;
@@ -431,23 +415,6 @@ $colorYellow: #FFCC00;
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-
-                .title{
-                    font-size: 1.9em;
-                    font-weight: bold;
-                    padding: 30px 0 10px 0;
-                    position: relative;
-                    text-align: left;
-                }
-            
-                .title::before{
-                    content: "";
-                    position: absolute;
-                    width: 5%;
-                    height: 1px;
-                    bottom:0;
-                    border-bottom: 4px solid $colorYellow;
-                }
 
                 .speach{
                     margin: 50px 0;
@@ -549,22 +516,6 @@ $colorYellow: #FFCC00;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-            
-                .title{
-                    font-size: 1.9em;
-                    font-weight: bold;
-                    padding: 30px 0 10px 0;
-                    position: relative;
-                }
-            
-                .title::before{
-                    content: "";
-                    position: absolute;
-                    width: 3em;
-                    height: 1px;
-                    bottom:0;
-                    border-bottom: 4px solid $colorYellow;
-                }
 
                 .summary{
                     margin: 50px 0 0 0;
@@ -669,23 +620,6 @@ $colorYellow: #FFCC00;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-            
-                .title{
-                    font-size: 1.9em;
-                    font-weight: bold;
-                    padding: 30px 0 10px 0;
-                    position:relative;
-                    z-index: 1;
-                }
-            
-                .title::before{
-                    content: "";
-                    position: absolute;
-                    width: 3em;
-                    height: 1px;
-                    bottom:0;
-                    border-bottom: 4px solid $colorYellow;
-                }
         
                 > span:nth-child(2){
                     margin: 50px 0 5px 0;
