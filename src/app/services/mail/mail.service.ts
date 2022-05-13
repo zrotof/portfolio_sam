@@ -16,6 +16,6 @@ export class MailService {
       })
     };
 
-    return this.httpRequest.post("https://sam-man-portfolio-backend.herokuapp.com/mail", mailInfo, headers); 
+    return this.httpRequest.post("https://www.api.sm-digitalizer.fr/mail", mailInfo, headers); 
   }
 }

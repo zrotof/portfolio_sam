@@ -211,15 +211,16 @@ activeContent(param:number){
     this.mailService.sendMail(JSON.stringify(this.contactForm.value)).pipe(finalize(() => this.isContactFormSubmittedAndNotErrorOnClientSide = false),
     ).subscribe(resp =>{
 
-      if(resp['message'] === "success"){        
+      if(resp['success'] === "true"){        
         this.messageService.add({severity:'success', detail: "Message envoyé."});
         this.onReset();
       }
 
       else{
+        console.log(resp)
 
-        this.messageService.add({severity:'error',detail: "Erreur lors de l'envoi"});
-    
+        this.messageService.add({severity:'error', detail: "Erreur lors de l'envoi"});
+
       }
 
     });
