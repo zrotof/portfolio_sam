@@ -16,7 +16,7 @@ export class ProjectsService {
     return this.projectsListBriefData = [
       {
         "projectTitle":"Sscovid19",
-        "projectImage": "../../../assets/img/sscovid19.png",
+        "projectImage": "../../../assets/img/projects/sscovid19.png",
         "projectSummary":"Réalisation d'une application web qui permet de suivre l'évolution de l'épidémie de la covid-19 dans le monde",
         "projectImageAltAttribute": "miniature du site web sscovid19",
         "projectCode": "sscovid19"
@@ -24,19 +24,27 @@ export class ProjectsService {
       },
 
       {
-        "projectTitle":"Casabreizh",
-        "projectImage": "../../../assets/img/casabreizh.png",
-        "projectSummary":"Réalisation du site web du restaurant Casabreizh, lanterne de la gastronomie africaine et bretonne",
+        "projectTitle":"Restaurant",
+        "projectImage": "../../../assets/img/projects/casabreizh.png",
+        "projectSummary":"Réalisation de template responsive de site web d'un restaurant mono-page ",
         "projectImageAltAttribute": "miniature du site web casabreizh",
         "projectCode": "casabreizh"
       },
 
       {
         "projectTitle":"Elites Voyages",
-        "projectImage": "../../../assets/img/ev.png",
+        "projectImage": "../../../assets/img/projects/ev.png",
         "projectSummary":"Réalisation du site web d'Elites Voyages, agence de voyage, de tourisme, de transport et de logistique",
         "projectImageAltAttribute": "miniature du site web elites voyages",
         "projectCode": "elitesvoyages"
+      },
+
+      {
+        "projectTitle":"FOR YOU",
+        "projectImage": "../../../assets/img/projects/foryou.png",
+        "projectSummary":"Réalisation du site web de la chaine de télévision et chaine de radio internationale For You Media",
+        "projectImageAltAttribute": "logo de la chaine de télé foryou media",
+        "projectCode": "foryoumedias"
       }
     ]
   }
@@ -46,27 +54,26 @@ export class ProjectsService {
     return this.projectsListAllData = [
 
       {
-        sscovid19:
-          {
-            image: "../../../assets/img/sscovid-header.png",
+            code: "sscovid19",
+            image: "../../../assets/img/projects/sscovid19-responsive.png",
             link:"https://sscovid19.com",
             who:[
               {
-                message:"<b>SSCOVID19</b> est une application web qui présente l'état de l'évolution de la covid-19 dans le monde."
+                message:"<b>SSCOVID19</b> est une application web qui présente l'état d'évolution de la covid-19 dans le monde."
               }
             ],
             why:[
               {
-                message: "C'est un projet personnel que j'ai réalisé dans le but de participer activement dans la lutte contre la covid en permettant à quiconque de consulter les chiffres clés de la pandémie."
+                message: "C'est un projet personnel que j'ai réalisé dans le but de participer activement dans la lutte contre la covid en permettant à quiconque de consulter les chiffres clés de la pandémie. "
               },
               {
-                message: "Il prend en compte les données de plus de 215 pays et les affiche via des graphes et des tableaux représentants les chiffres enregistrés par pays, par continent."
+                message: "Il prend en compte les données de plus de 215 pays et les affiche via des graphes et des tableaux représentants les chiffres enregistrés par pays et par continent."
               }
             ],
             requirement_intro:"Quelles sont les spécifités de ce projet ?",
             requirements:[
               {
-                message: "présentation des chiffres mondiaux globaux de la pandémie"
+                message: "présentation des chiffres mondiaux de la pandémie "
               },
               {
                 message: "présentation des chiffres par continents et par pays"
@@ -122,27 +129,20 @@ export class ProjectsService {
                 image: ""
               }
             ],
-          }
+          
       },
       {
-        casabreizh:
-          {
-            image: "../../../assets/img/casabreizh-header.png",
+        code: "casabreizh",
+            image: "../../../assets/img/projects/casabreizh-responsive.png",
             link:"https://casabreizh.herokuapp.com",
             who:[
               {
-                message:"<b>Le CASABREIZH</b> est un restaurant situé dans la ville de Rennes. Il propose des spécialités africaines et des plats bretons."
+                message:"Je me suis proposé de réaliser un template de site web d'un restaurant."
               }
             ],
             why:[
               {
-                message: "Après avoir repéré l'ancien site web du restaurant sur internet, j'ai contacté le propriétaire en lui proposant de travailler ensemble pour refaire un nouveau site web qui répond aux réalités et spécificités actuelles en terme de design et expérience utilisateur."
-              },
-              {
-                message: " Ce dernier a bien accueilli ma proposition et m'a confié d'autres problèmes qu'il rencontrait avec son ancien site web vieux de plus de 10 ans."
-              },
-              {
-                message: " Après validation des interfaces utilisateurs, j'ai débuté le projet en le sollicitant tout au long de la phase de développement."
+                message: "C'est un site web mono-page qui permettrait à un restaurant de présenter ses plats et services proposés à ses clients"
               }
             ],
             requirement_intro:"Les exigences de ce site web sont les suivantes: ",
@@ -157,20 +157,17 @@ export class ProjectsService {
                 message: "donner la possibilités aux utilisateurs de contacter le restaurant via un formulaire de contact"
               },
               {
-                message: "créer une interface administrateur sécurisée, accessible via login et mot de passe qui permet de gérer les plats ( mettre à jour et indiquer l'indisponibité/disponibilité)"
+                message: "créer une partie administrateur sécurisée qui permet de gérer les plats ( mettre à jour et indiquer l'indisponibité/disponibilité)"
               },
               {
-                message: "rediriger les clients vers les comptes Uber Eat et Deliveroo du restaurant pour des livraisons à domicile"
+                message: "rediriger les clients vers les comptes Uber Eat, Deliveroo , ... du restaurant pour des livraisons à domicile"
               },
               {
                 message: "optimiser le référencement SEO"
-              },
-              {
-                message: "terminer le développement du site web et le mettre en ligne"
               }
             ],
 
-            estate: "en cours",
+            estate: "terminé",
 
             technologies:[
               {
@@ -229,13 +226,12 @@ export class ProjectsService {
                 alt:"github logo"
               }
             ],
-          }
+          
       },
       {
-        elitesvoyages:
-          {
-            image: "../../../assets/img/logos/ev_logo.png",
-            link:"https://elites-voyages.herokuapp.com",
+        code: "elitesvoyages",
+            image: "../../../assets/img/projects/ev-responsive.png",
+            link:"https://elites-voyages.com",
             who:[
               {
                 message:"<b>ELITES VOYAGES</b>  est une agence de voyage et de tourisme située au Cameroun."
@@ -243,48 +239,53 @@ export class ProjectsService {
             ],
             why:[
               {
-                message: "Voulant se rapprocher d'avantage de sa clientèle grandissante et surtout voulant s'alligner dans la dynamique de digitalisation mondiale actuelle, elle a décidé de se doter d'un site web aujourd'hui indispensable dans ces secteurs d'activités."
+                message: "Voulant se rapprocher d'avantage de sa clientèle grandissante et surtout voulant s'alligner dans la dynamique de digitalisation mondiale actuelle, elle a décidé de se doter d'un site web aujourd'hui indispensable dans ses secteurs d'activités."
               },
               {
-                message: " Après un ensemble de réunions au bouts desquelles je leur ai présenté le design du site web et les interfaces utilisateurs de la solution que je proposais, nous sommes tombés d'accord. Étant donné qu'elle ne possedait pas d'ancienne solution , j'ai dû tout créer de rien y compris le logo."
+                message: "Après un ensemble de réunions au bouts desquelles je leur ai présenté le design du site web et les interfaces utilisateurs de la solution que je proposais, nous sommes tombés d'accord. Étant donné qu'elle ne possedait pas d'ancienne solution , j'ai dû tout créer de rien y compris le logo."
               }
             ],
-            requirement_intro:"Les exigences de ce site web sont les suivantes: ",
+            requirement_intro:"Les exigences de ce site web étaient les suivantes: ",
             requirements:[
               {
                 message: "achat du nom de domaine"
               },
               {
-                message: "création d'adresses mails de contacts professionnelles"
-              },
-              {
-                message: "création d'une partie administrateur sécurisée de gestion du site web"
-              },
-              {
-                message: "création des formulaires de contact utilisateurs"
-              },
-              {
-                message: "création des comptes par des utilisateurs"
-              },
-              {
-                message: "présentation des services proposés par des partenanire"
+                message: "création d'adresses mails professionnelles"
               },
               {
                 message: "présentation des services de l'entreprise via des design de qualité"
               },
+              
               {
-                message: "optimisation le référencement SEO"
+                message: "création de différents formulaires d'accès aux services (Réservation de billet d'avions, hôtel, appartements meublé, location voiture, expédition DHL, ...) "
               },
               {
-                message: "intégration googe analytics"
+                message: "présentation des services proposés par des entreprises partenanires"
               },
               {
-                message: "site web bilingue (anglais, français)"
+                message: "création d'une partie administrateur sécurisée destinée à la gestion du site web"
+              },
+              
+              {
+                message: "optimisation du SEO"
+              },
+              {
+                message: "intégration google analytics"
+              },
+              {
+                message: "Intégration d'une adaptation de prix suivant les dévises"
+              },
+              {
+                message: "Formation des équipes pour l'utilisation de la partie admin"
+              },
+              {
+                message: "Mise en ligne du site web"
               }
               
             ],
 
-            estate: "en cours",
+            estate: "terminé",
 
             technologies:[
               {
@@ -348,7 +349,7 @@ export class ProjectsService {
                 alt:"google anlystics logo"
               }
             ],
-          }
+          
       }
 
     ]
@@ -356,15 +357,18 @@ export class ProjectsService {
 
   getProjectData(param: string){
 
-    let projectData: any[];
+    let projectData: any;
 
-    this.projectsListAllData.forEach(project =>{
-      if(typeof project[param] !== "undefined" ){
-        projectData = project[param];
+    let projectsListAllData = this.initProjectData();
+
+    projectsListAllData.forEach(project =>{
+      
+      if( project.code == param ){
+        projectData = project;
       }
     })
 
-    return projectData
+    return projectData;
   }
   
   

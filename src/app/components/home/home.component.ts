@@ -17,7 +17,7 @@ import {DynamicDialogRef} from 'primeng/dynamicdialog';
 
 import Typewriter from 'typewriter-effect/dist/core';
 
-import { faHome, faUserAlt, faSuitcase, faListAlt,faPhone,faMapMarkerAlt,faLanguage,faDownload,faCalendarAlt,faFutbol,faGuitar,faEnvelope,faPaperPlane,faLaptop,faCode,faRocket, faPalette, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import { faPhone,faMapMarkerAlt,faLanguage,faDownload,faCalendarAlt,faFutbol,faGuitar,faEnvelope,faPaperPlane,faLaptop,faCode,faRocket, faPalette, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 import { ProjectDetailComponent } from '../project-detail/project-detail.component';
 
 
@@ -29,6 +29,7 @@ import { ProjectDetailComponent } from '../project-detail/project-detail.compone
 })
 export class HomeComponent implements OnInit {
 
+  //Use of font awesome icons
   faPhone= faPhone;
   faMapMarkerAlt = faMapMarkerAlt;
   faLanguage = faLanguage;
@@ -50,33 +51,31 @@ export class HomeComponent implements OnInit {
   isBurgerMenuClicked: boolean = false;
 
 
-//variable used to store all our projects
+//variable used to store all our showcased projects
 projectList : Project[];
 
-//Données du projet
-  projectData : any = [];
+//variable used to store the clicked projet
+projectData : any = [];
+
+//Used to initialise anchor
+currentLinkNumber = 1;
+currentAnchorTag ="accueil";
 
 
-  currentLinkNumber = 1;
-  currentAnchorTag ="accueil";
+currentContent:number  = 0;
 
 
-// variable used for about section
-posterLink = "../../../assets/img/sscovid19.png";
-
-  currentContent:number  = 0;
-
-
-  // variable used for contact section
+  // variables used for contact section
   contactForm: FormGroup;
   isContactFormSubmitted = false;
   error = false;
   success = false;
   isContactFormSubmittedAndNotErrorOnClientSide = false; 
+
+  //variable used for show modal when click on showcased project
   ref: DynamicDialogRef;
 
 
-  list :any[] = []
   constructor(private route: ActivatedRoute, 
     private router: Router,
     private fb: FormBuilder, 
@@ -89,9 +88,6 @@ posterLink = "../../../assets/img/sscovid19.png";
 
 
   ngOnInit(): void {
-
- //   this.redirectOnLoad();
-
 
     this.activeContent(this.currentContent);
 
@@ -110,42 +106,36 @@ posterLink = "../../../assets/img/sscovid19.png";
 
   }
 
-//Funtions that will give us our project list
-
+//Funtion that retrieve all showcased projects
 getAllProject(){
   this.projectList = this.projectsService.initProjectsListBriefData();
 }
 
 
-//this function is used to redirect to the right project cliccked
-//For this we will vérify if the given parameter is known inside our projects,
+//this function is used to redirect to the right project clicked
+//For this we will verify if the given parameter is known inside our project data by the field code in all project,
 //If so we call our reusable modal 
+//If not we display a message error to user to let him know something wrong
 
 showProject(param: string) {
 
-    this.list = this.projectsService.initProjectData();
-    console.log(this.list)
-    this.list.forEach(project =>{
-      if(project[param]){
-        console.log(project[param])
+    const projectData = this.projectsService.getProjectData(param);
+
+    if(typeof projectData !== "undefined"){
         this.ref = this.dialogService.open(ProjectDetailComponent, {
           data: {
-            projectParam: param
+            projectData: projectData
           },
           baseZIndex: 10000
         });
+    }
+    else{
+      this.messageService.add({severity:'error', detail: "Projet en phase d'initialisation. Veuillez re-essayer plus tard."});
+    }
         
-      }
-
-      else{
-        //display message service
-      }
-
-    });
-
 }
 
-
+//Function used to do the typing effect on the hero banner
 typeWriter(){
 
   new Typewriter('#typewriter', {
@@ -217,7 +207,6 @@ activeContent(param:number){
       }
 
       else{
-        console.log(resp)
 
         this.messageService.add({severity:'error', detail: "Erreur lors de l'envoi"});
 

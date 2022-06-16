@@ -13,13 +13,12 @@ import { ProjectsService } from 'src/app/services/projects/projects.service';
 
 export class ProjectDetailComponent implements OnInit {
 
-  projectCode: string;
   project: any;
 
   constructor(
     public ref: DynamicDialogRef,
-    public config: DynamicDialogConfig,
-    private projectService : ProjectsService) { }
+    public config: DynamicDialogConfig
+    ) { }
 
   ngOnInit(): void {
     this.getProjectData();
@@ -27,8 +26,7 @@ export class ProjectDetailComponent implements OnInit {
 
   //getting project data
   getProjectData(){
-    this.projectCode = this.config.data.projectParam;
-    this.project = this.projectService.getProjectData(this.projectCode);
+    this.project = this.config.data.projectData;
   }
 
   //Open the project on the browser

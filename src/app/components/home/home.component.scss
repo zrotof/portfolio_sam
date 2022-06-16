@@ -139,10 +139,22 @@ $colorYellow: #FFCC00;
                     align-items: center;
                     justify-content: center;
 
-                    .network{
-                        height: 34px;
-                        width: 34px;
+                    .pi{
+                        font-size: 21px;
                         cursor: pointer;
+                        margin: 10px 7px;
+                    }
+
+                    .linkedin:hover{
+                        color: #0a66c2;
+                    }
+
+                    .github:hover{
+                        color: black;
+                    }
+
+                    .instagram:hover{
+                        color: rgb(182, 69, 140);
                     }
 
                 }
@@ -544,7 +556,7 @@ $colorYellow: #FFCC00;
                     margin: 60px 0;
 
                     .project{
-                        width: 220px;
+                        width: 300px;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -558,7 +570,7 @@ $colorYellow: #FFCC00;
 
                         .project-image{
                             width: 100%;
-                            height: 130px;
+                            height: 200px;
                             overflow: hidden;
                             img{
                                 width: 100%;
