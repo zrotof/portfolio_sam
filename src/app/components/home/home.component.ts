@@ -130,7 +130,7 @@ showProject(param: string) {
         });
     }
     else{
-      this.messageService.add({severity:'error', detail: "Projet en phase d'initialisation. Veuillez re-essayer plus tard."});
+      this.messageService.add({severity:'warn', detail: "Projet en phase d'initialisation. Veuillez re-essayer plus tard."});
     }
         
 }

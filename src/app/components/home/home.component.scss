@@ -103,32 +103,32 @@ $colorYellow: #FFCC00;
 
             
                 button{
-                    padding: 6px 25px;
+                    border: none;
+                    padding: 5px 25px;
                     border-radius: 100px;
-                    margin-top: 10px;
-                    border: 1px solid $colorBlue;
                     cursor: pointer;
-                    background-color: white;
-                    box-shadow: 3px 4px 5px $colorYellow;
+                    background-color: $colorBlue;                    
                     display: flex;
                     align-items: center;
-                    align-items: center;
                     width: fit-content;
-                    font-size: 1.1em;
+                    margin: auto;
+                    margin-bottom: 15px;
+                    margin-top: 15px;
+                    transition: all 0.5s ease 0s;
+                    color: white;
 
                     a{
                         text-decoration: none;
                         margin-right: 10px;
-                        color: $colorBlue;
+                        color: white;
+                        font-size: 1.05em;
                     }
             
                 }
             
                 button:hover{
-                    background-color: $colorBlue ;
-                    transition: all 0.5s ease 0s;
                     color: $colorYellow;
-
+                    box-shadow: 3px 4px 5px $colorYellow;
                     a{
                         color: $colorYellow;
                     }

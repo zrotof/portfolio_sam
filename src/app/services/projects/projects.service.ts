@@ -285,7 +285,7 @@ export class ProjectsService {
               
             ],
 
-            estate: "terminé",
+            estate: "en cours",
 
             technologies:[
               {
