@@ -119,7 +119,7 @@ currentContent:number  = 0;
     this.metaTagService.addTags([
       
       //Init  description for browser
-      { name: "description", content: "J'accompagne les particuliers et les entreprises à passer le cap du digital en créant des sites ou applications web sur messure leur permettant d'atteindre leurs objectifs." },
+      { name: "description", content: "J'accompagne les particuliers et les entreprises à passer le cap du digital en créant des sites ou applications web sur messure leur permettant d'atteindre leurs objectifs."},
 
       //For link sharing
       //Essential META Tags
@@ -127,11 +127,10 @@ currentContent:number  = 0;
       { name: "og:type", content: "website"},
       { name: "og:url", content: "https://sm-digitalizer.fr"},
       { name: "og:description", content: "J'accompagne les particuliers et les entreprises à passer le cap du digital en créant des sites ou applications web sur messure leur permettant d'atteindre leurs objectifs."},
-      { name: "og:url", content: "https://sm-digitalizer.fr"},
-      { name: "og:image", content: "../../../assets/img/assets/img/when-sharing-link.jpeg"},
+      { name: "og:image", content: "../../../assets/img/when-sharing-link.jpeg"},
       { name: "og:site_name", content: "SM Digitalizer"},
-      { name: "twitter:card", content: "./../../assets/img/assets/img/when-sharing-link.jpeg"},
-      { name: "twitter:image:alt", content: "Bureau d'un développeur web et texte incitant le lecteur à passer à l'action"},
+      { name: "twitter:card", content: "./../../assets/img/when-sharing-link.jpeg"},
+      { name: "twitter:image:alt", content: "Bureau d'un développeur web et texte incitant le lecteur à passer à l'action"}
 
     ])
   }
