@@ -30,7 +30,7 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
     FooterComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,

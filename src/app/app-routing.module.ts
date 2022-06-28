@@ -8,7 +8,9 @@ const routerOptions: ExtraOptions = {
   useHash: false,
   anchorScrolling: "enabled",
   onSameUrlNavigation: 'reload',
+  initialNavigation: 'enabled'
 };
+
 @NgModule({
   imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]

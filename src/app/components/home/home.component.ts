@@ -1,9 +1,10 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd} from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 import { Observable, of } from 'rxjs';
 import { catchError, filter, first, map } from 'rxjs/operators';
 import { finalize } from 'rxjs/operators';
-
+import { DOCUMENT } from '@angular/common';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 import { Project } from '../../models/project';
@@ -83,11 +84,16 @@ currentContent:number  = 0;
     private mailService: MailService, 
     private messageService: MessageService,
     private primengConfig: PrimeNGConfig,
-    public dialogService: DialogService) { }
+    public dialogService: DialogService,
+    private metaTagService: Meta,
+    private titleService: Title, 
+    @Inject(DOCUMENT) private document: Document) { }
 
 
 
   ngOnInit(): void {
+
+    this.initMetaAndTitle();
 
     this.activeContent(this.currentContent);
 
@@ -101,9 +107,33 @@ currentContent:number  = 0;
 
     this.typeWriter();
 
-
     this.getAllProject();
+  }
 
+  //Initialisation of meta and description when searching pn google
+  initMetaAndTitle(){
+
+    //Init title for SEO
+    this.titleService.setTitle("Portfolio | Développeur Fullstack JS Rennes 35 - Samuel Mandeng"); 
+      
+    this.metaTagService.addTags([
+      
+      //Init  description for browser
+      { name: "description", content: "J'accompagne les particuliers et les entreprises à passer le cap du digital en créant des sites ou applications web sur messure leur permettant d'atteindre leurs objectifs." },
+
+      //For link sharing
+      //Essential META Tags
+      { name: "og:title", content: "SM-Digitalizer | Développeur Fullstack JS"},
+      { name: "og:type", content: "website"},
+      { name: "og:url", content: "https://sm-digitalizer.fr"},
+      { name: "og:description", content: "J'accompagne les particuliers et les entreprises à passer le cap du digital en créant des sites ou applications web sur messure leur permettant d'atteindre leurs objectifs."},
+      { name: "og:url", content: "https://sm-digitalizer.fr"},
+      { name: "og:image", content: "../../../assets/img/assets/img/when-sharing-link.jpeg"},
+      { name: "og:site_name", content: "SM Digitalizer"},
+      { name: "twitter:card", content: "./../../assets/img/assets/img/when-sharing-link.jpeg"},
+      { name: "twitter:image:alt", content: "Bureau d'un développeur web et texte incitant le lecteur à passer à l'action"},
+
+    ])
   }
 
 //Funtion that retrieve all showcased projects
@@ -138,7 +168,8 @@ showProject(param: string) {
 //Function used to do the typing effect on the hero banner
 typeWriter(){
 
-  new Typewriter('#typewriter', {
+  const typewriter = this.document.querySelector('#typewriter');
+  new Typewriter(typewriter, {
     strings: ['Développeur Web', 'Web Designer'],
     autoStart: true,
     loop: true
@@ -163,8 +194,8 @@ activeContent(param:number){
 
       this.currentContent = param;
 
-    const headers = <NodeListOf<HTMLElement>>document.querySelectorAll(".profil-header");
-    const contents = <NodeListOf<HTMLElement>>document.querySelectorAll(".profil-info");
+    const headers = <NodeListOf<HTMLElement>>this.document.querySelectorAll(".profil-header");
+    const contents = <NodeListOf<HTMLElement>>this.document.querySelectorAll(".profil-info");
 
     headers.forEach(element => {
       element.classList.remove("active-header");

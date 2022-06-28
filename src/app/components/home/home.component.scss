@@ -29,6 +29,7 @@ $colorYellow: #FFCC00;
             }
             
             .content{
+
                 display: flex;
                 justify-content: space-around;
                 align-items: center;    
@@ -435,6 +436,7 @@ $colorYellow: #FFCC00;
                 left:0;
                 top: -2px;
             }
+
             .content{
                 width: 100%;
                 margin: 0 55px;
@@ -447,40 +449,73 @@ $colorYellow: #FFCC00;
                     margin: 50px 0;
                     font-size: 1.2em;
                 }
-                .services-list{
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 60px 0;
 
-                    .service{
-                        width: 250px;
+            
+
+
+                .intro-services{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    .intro{
+                        width: 40%;
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        margin: 0 25px 50px 25px;
-                        background-color: $colorBlue;
-                        border-radius: 10px;
-                        box-shadow: 4px 5px 6px -1px #363636;
-                        padding: 20px 20px;
-                        color: $background;
-                        font-size: 0.95rem;
 
-                        fa-icon{
-                            font-size: 3em;
-                            color: $colorYellow;
+                        h3{
+                            
+                            font-weight: bold;
+                            font-size: 2em;
+                            color: #00011f;
+                            position: relative;
+                            margin-bottom: 25px;
                         }
 
-                        .service-title{
-                            margin: 20px 0;
-                            font-weight: bold;
-                            font-size: 1.3em;
 
+                        span{
+                            font-size: 1.15em;
                         }
                     }
+    
+                    .services-list{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 60px 0;
+                        width: 620px;
+    
+                        .service{
+                            width: 260px;
+                            min-height: 300px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin: 0 15px 25px 15px;
+                            background-color: $colorBlue;
+                            border-radius: 10px;
+                            box-shadow: 4px 5px 6px -1px #363636;
+                            padding: 20px 15px;
+                            color: $background;
+                            font-size: 0.95rem;
+                            cursor: pointer;
+    
+                            fa-icon{
+                                font-size: 3em;
+                                color: $colorYellow;
+                            }
+    
+                            .service-title{
+                                margin: 20px 0;
+                                font-weight: bold;
+                                font-size: 1.3em;
+                            }
+                        }
+                    }
+
                 }
+
             }
 
             .call-bloc{
@@ -923,6 +958,35 @@ $colorYellow: #FFCC00;
 
 }
 
+@media all and (max-width: 1095px){
+    .app{
+
+        .services{  
+            
+            .content{
+                        
+                .intro-services{
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .intro{
+                        width: 100%;
+                        margin: 50px 0;
+                        align-items: center;
+                    }
+
+                    .services-list{
+                        width: 100%;
+                    }
+
+                }
+      
+            }
+        }
+    }
+
+}
+
 @media all and (max-width: 1024px){
     .app{
 
@@ -958,6 +1022,7 @@ $colorYellow: #FFCC00;
     }
 
 }
+
 
 @media all and (max-width: 880px){
     .app{
@@ -1037,6 +1102,24 @@ $colorYellow: #FFCC00;
                     margin-top: 150px;
                 }
 
+            }
+        }
+
+        .services{  
+            
+            .content{
+                        
+                .intro-services{
+
+                    .intro{
+
+                        h3{
+                            font-size: 1.5em;
+                        }
+                    }
+
+                }
+      
             }
         }
 

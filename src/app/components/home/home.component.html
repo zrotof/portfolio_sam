@@ -199,52 +199,47 @@
             <div class="content my-container">
                 <span class="title">Services</span>
                 
-                <div class="services-list">
-                    <div class="service">
-                        <fa-icon [icon]=faPalette></fa-icon>
-                        <span class="service-title">Web Designer UI</span>
-                        <p>
-                            L’identité graphique de votre entreprise est le cœur de votre stratégie de communication
-                        </p>
-   
-                    </div>
-                    <div class="service">
-                        <fa-icon [icon]=faCode></fa-icon>
-                        <span class="service-title">Création Site Web</span>
-                        <p>
-                            Vous souhaitez vous rendre visible sur Internet ? 
-                        </p>
-                        <p>
-                            Votre site web existant ne correspond plus à vos attentes et à celles de vos clients? 
-                        </p>
-                        <p>
-                            Vous avez un site vitrine et désirez vous lancer dans une activité e-commerce ?
-                        </p>
-                        <p>
-                            Nous travaillerons ensemble dans la réalisation de votre site web.
-                        </p>
-                        
-                    </div>
-                    <div class="service">
-                        <fa-icon [icon]=faRocket></fa-icon>
-                        <span class="service-title">Reférencement SEO</span>
-                            <p>
-                                Devenez vraiment visible sur Google auprès des internautes qui recherchent vos services chaque jour sur internet.
-                            </p>
-                            <p>
-                                 Votre site est déjà en ligne et vous souhaitez améliorer son positionnement web ? Il n'est pas trop tard pour optimiser son référencement naturel.
-                            </p>
-                    </div>
+                <div class="intro-services">
 
-            <!-- Bloc Formation
-                    <div class="service">
-                        <fa-icon [icon]=faChalkboardTeacher></fa-icon>
-                        <span class="service-title">Formation</span>
-                        <span>
-                            Je propose des formations sur l'utilisation de votre site internet pour que vous puissiez le faire évoluer. Pas besoin de payer indéfiniment une "maintenance" de votre site !
-                        </span>
+                    <div class="intro">
+                        <h3 >Pourquoi me confier votre projet ?</h3>
+                        <span>Je vous propose un panel de services professionnels autour du développement digital. Ces services sont complémentaires ce qui me permet de vous proposer une solution complète à vos besoins. </span>
                     </div>
-            -->
+                    <div class="services-list">
+
+                        <div class="service">
+                            <fa-icon [icon]=faPalette></fa-icon>
+                            <span class="service-title">Web Designer UI/UX</span>
+                            <p>
+                               Je crée des design personnalisés et spécifiques pour votre projet de création de site ou application web.
+                            </p>
+       
+                        </div>
+    
+                        <div class="service">
+                            <fa-icon [icon]=faCode></fa-icon>
+                            <span class="service-title">Création Site Web</span>
+                            <p>
+                                Je développe vos sites et applications web en optimisant les ressources ( temps de chargement, ... ) et en m'assurant de la bone qualité du code
+                            </p>
+                            
+                        </div>
+    
+                        <div class="service">
+                            <fa-icon [icon]=faRocket></fa-icon>
+                            <span class="service-title">Reférencement SEO</span>
+                                <p>
+                                    Devenez vraiment visible en améliorant votre positionnement sur Google auprès des internautes qui recherchent vos services chaque jour sur internet.
+                                </p>
+                        </div>
+    
+                        <div class="service">
+                            <fa-icon [icon]=faChalkboardTeacher></fa-icon>
+                            <span class="service-title">Formation</span>
+                            <p>Vous êtes en recherche d'acquisition de compétences techniques dans le domaine du développement web?</p>
+                            <p>Je vous apprends par la pratique à utiliser les technologies tels que ( HTML, CSS, Javascript, Angular, Nodejs, PostgreSQL, ...)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -263,7 +258,6 @@
                         </div>
                         <span class="project-title">{{project.projectTitle}}</span>
                         <span class="project-summary">{{project.projectSummary}}</span>
-                        <!--- <button (click)='goOnSscovid()'>Voir plus</button> -->
 
                         <button (click)="showProject(project.projectCode)">Voir plus</button>
                     </div>

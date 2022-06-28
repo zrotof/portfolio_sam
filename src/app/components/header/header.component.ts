@@ -1,5 +1,6 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 
 import { faHome, 
   faUserAlt, 
@@ -40,7 +41,8 @@ export class HeaderComponent implements OnInit {
   currentAnchorTag ="accueil";
 
   constructor(
-    private router: Router) 
+    private router: Router,
+    @Inject(DOCUMENT) private document: Document) 
     { }
 
   ngOnInit(): void {
@@ -50,10 +52,10 @@ export class HeaderComponent implements OnInit {
 
   //Handling click on burger menu
   onBurgerMenu(){
-    let navSmallScreen = <HTMLElement>document.querySelector('nav');
-    let inputstatus = <HTMLInputElement>document.querySelector('.burger input');
-    let burgerParent = <HTMLElement>document.querySelector('.burger');
-    let header = <HTMLElement>document.querySelector('header');
+    let navSmallScreen = <HTMLElement>this.document.querySelector('nav');
+    let inputstatus = <HTMLInputElement>this.document.querySelector('.burger input');
+    let burgerParent = <HTMLElement>this.document.querySelector('.burger');
+    let header = <HTMLElement>this.document.querySelector('header');
     // À chaque clique sur l'input on vérifie si l'input est cochée
     if(inputstatus.checked === true){
       
@@ -87,11 +89,11 @@ export class HeaderComponent implements OnInit {
   
     onWindowScroll( ) {
 
-        let header = <HTMLElement>document.querySelector('header');
-        let about = <HTMLElement>document.querySelector('.about');
-        let services = <HTMLElement>document.querySelector('.services');
-        let projets = <HTMLElement>document.querySelector('.projects');
-        let contact = <HTMLElement>document.querySelector('.contact');
+        let header = <HTMLElement>this.document.querySelector('header');
+        let about = <HTMLElement>this.document.querySelector('.about');
+        let services = <HTMLElement>this.document.querySelector('.services');
+        let projets = <HTMLElement>this.document.querySelector('.projects');
+        let contact = <HTMLElement>this.document.querySelector('.contact');
     
         if(!this.isBurgerMenuClicked){
           // Changing background of header when scroll to a height bigger than the header height
@@ -181,9 +183,9 @@ export class HeaderComponent implements OnInit {
 //Setting the active link
   setActiveLink(linkNumber: number){
 
-    var myLinks = <NodeListOf<HTMLElement>>document.querySelectorAll("li a");
-    var navSmallScreen = <HTMLElement>document.querySelector('.header-right');
-    var inputstatus = <HTMLInputElement>document.querySelector('.burger input');
+    var myLinks = <NodeListOf<HTMLElement>>this.document.querySelectorAll("li a");
+    var navSmallScreen = <HTMLElement>this.document.querySelector('.header-right');
+    var inputstatus = <HTMLInputElement>this.document.querySelector('.burger input');
     
     myLinks.forEach(element =>{
       element.classList.remove("active-link");
