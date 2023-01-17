@@ -25,10 +25,10 @@ export class ProjectsService {
 
       {
         "projectTitle":"Restaurant",
-        "projectImage": "../../../assets/img/projects/casabreizh.png",
-        "projectSummary":"Réalisation de template responsive de site web d'un restaurant mono-page ",
+        "projectImage": "../../../assets/img/projects/restaurant.png",
+        "projectSummary":"Réalisation d'un template de site web idéal pour un restaurant avec un système de prise de commande en ligne",
         "projectImageAltAttribute": "miniature du site web casabreizh",
-        "projectCode": "casabreizh"
+        "projectCode": "restaurant"
       },
 
       {
@@ -40,10 +40,19 @@ export class ProjectsService {
       },
 
       {
-        "projectTitle":"FOR YOU",
-        "projectImage": "../../../assets/img/projects/foryou.png",
-        "projectSummary":"Réalisation du site web de la chaine de télévision et chaine de radio internationale For You Media",
-        "projectImageAltAttribute": "logo de la chaine de télé foryou media",
+        "projectTitle":"Élections",
+        "projectImage": "../../../assets/img/projects/fecabasket-campain.png",
+        "projectSummary":"Réalisation du site web de campagne pour la présidence d'une organisation sportive de basketball",
+        "projectImageAltAttribute": "Projet du candidat à la présidence",
+        "projectCode": "fecabasketcampain"
+      }
+      
+      ,
+      {
+        "projectTitle":"FOR YOU MEDIA",
+        "projectImage": "../../../assets/img/projects/foryou-media-afrique-logo.png",
+        "projectSummary":"Réalisation de l'application web de la chaine de télévision et chaine de radio internationale ForYou Media Africa",
+        "projectImageAltAttribute": "logo de la chaine de télé foryou media africa",
         "projectCode": "foryoumedias"
       }
     ]
@@ -55,7 +64,7 @@ export class ProjectsService {
 
       {
             code: "sscovid19",
-            image: "../../../assets/img/projects/sscovid19-responsive.png",
+            image: "../../../assets/img/projects/sscovid19-devices.png",
             link:"https://sscovid19.com",
             who:[
               {
@@ -94,139 +103,96 @@ export class ProjectsService {
             technologies:[
               {
                 name: "Angular 11",
-                image: ""
+                image: "../../../assets/img/logos/angular_logo.png"
               },
               {
                 name: "Node js",
-                image: ""
+                image: "../../../assets/img/logos/node_logo.png"
               },
               {
                 name: "Express js",
-                image: ""
+                image: "../../../assets/img/logos/express_logo.png"
               },
               {
                 name: "PostgreSQL",
-                image: ""
+                image: "../../../assets/img/logos/postgres_logo.png"
               },
               {
                 name: "AmCharts",
-                image: ""
+                image: "../../../assets/img/logos/amcharts_logo.png"
               },
               {
-                name: "Gogle Analytics",
-                image: ""
+                name: "Google Analytics",
+                image: "../../../assets/img/logos/google_analytics_logo.png"
               },
               {
-                name: "Heroku",
-                image: ""
-              },
-              {
-                name: "Hostiger",
-                image: ""
+                name: "o2Switch",
+                image: "../../../assets/img/logos/o2switch_logo.png"
               },
               {
                 name: "Github",
-                image: ""
+                image: "../../../assets/img/logos/github.png"
               }
-            ],
-          
+            ]
       },
       {
-        code: "casabreizh",
-            image: "../../../assets/img/projects/casabreizh-responsive.png",
+        code: "restaurant",
+            image: "../../../assets/img/projects/restaurant-responsive.png",
             link:"https://casabreizh.herokuapp.com",
             who:[
               {
-                message:"Je me suis proposé de réaliser un template de site web d'un restaurant."
+                message:"Je me suis proposé de réaliser un système complet de gestion de site web de restaurant."
               }
             ],
             why:[
               {
-                message: "C'est un site web mono-page qui permettrait à un restaurant de présenter ses plats et services proposés à ses clients"
+                message: "J'ai cherché au travers de ce projet à créer un excellent outil à destinantion des restaurants leurs permettant de présenter des plats et services proposés tout en optimisant la prise de commande client. Les commandes sont passées directement sur le site web par le client et le restaurant les reçoit directement par mail et aussi dans la partie admin sécurisée. Cette partie admin permet aussi de gérer les produits pésentés sur le site web."
               }
             ],
-            requirement_intro:"Les exigences de ce site web sont les suivantes: ",
-            requirements:[
-              {
-                message: "permettre aux utilisateurs de consulter les menus, plats, desserts, boissons proposés par le restaurant"
-              },
-              {
-                message: "donner la possibilités aux utilisateurs de laisser des notes et commentaires via le site web"
-              },
-              {
-                message: "donner la possibilités aux utilisateurs de contacter le restaurant via un formulaire de contact"
-              },
-              {
-                message: "créer une partie administrateur sécurisée qui permet de gérer les plats ( mettre à jour et indiquer l'indisponibité/disponibilité)"
-              },
-              {
-                message: "rediriger les clients vers les comptes Uber Eat, Deliveroo , ... du restaurant pour des livraisons à domicile"
-              },
-              {
-                message: "optimiser le référencement SEO"
-              }
-            ],
-
             estate: "terminé",
 
             technologies:[
               {
                 name: "Angular 12",
-                image: "../../../assets/img/logos/angular_logo.png",
-                alt:"angular logo"
+                image: "../../../assets/img/logos/angular_logo.png"
               },
               {
                 name: "Prime ng",
-                image: "../../../assets/img/logos/primeng_logo.png",
-                alt:"prime ng logo"
+                image: "../../../assets/img/logos/primeng_logo.png"
               },
               {
                 name: "Sass",
-                image: "../../../assets/img/logos/scss.png",
-                alt:"sass logo"
+                image: "../../../assets/img/logos/scss_logo.png"
               },
               {
                 name: "Node js",
-                image: "../../../assets/img/logos/node_logo.png",
-                alt:"node js logo"
+                image: "../../../assets/img/logos/node_logo.png"
               },
               {
                 name: "Express js",
-                image: "../../../assets/img/logos/express_logo.png",
-                alt:"express logo"
+                image: "../../../assets/img/logos/express_logo.png"
               },
               {
-                name: "MongoDB",
-                image: "../../../assets/img/logos/mongodb_logo.png",
-                alt:"mongoDB logo"
-              },
-              {
-                name: "OVH",
-                image: "../../../assets/img/logos/ovh_logo.png",
-                alt:"ovh logo"
+                name: "MongoDB Atlas",
+                image: "../../../assets/img/logos/mongodb_logo.png"
               },
               {
                 name: "JWT",
-                image: "../../../assets/img/logos/json_web_token_logo.png",
-                alt:"jwt logo"
+                image: "../../../assets/img/logos/json_web_token_logo.png"
               },
               {
-                name: "Heroku",
-                image: "",
-                alt:"angular logo"
+                name: "o2switch",
+                image: "../../../assets/img/logos/o2switch_logo.png"
               },
               {
-                name: "Adobe XXD",
-                image: "../../../assets/img/logos/adobe_xd.png",
-                alt:"adobe logo"
+                name: "Adobe XD",
+                image: "../../../assets/img/logos/adobe_logo.png"
               },
               {
                 name: "Github",
-                image: "../../../assets/img/logos/",
-                alt:"github logo"
+                image: "../../../assets/img/logos/github.png"
               }
-            ],
-          
+            ]
       },
       {
         code: "elitesvoyages",
@@ -239,7 +205,7 @@ export class ProjectsService {
             ],
             why:[
               {
-                message: "Voulant se rapprocher d'avantage de sa clientèle grandissante et surtout voulant s'alligner dans la dynamique de digitalisation mondiale actuelle, elle a décidé de se doter d'un site web aujourd'hui indispensable dans ses secteurs d'activités."
+                message: "Voulant se rapprocher d'avantage de sa clientèle grandissante, elle a décidé de se doter d'un site web lui permettant de fournir un service de qualité aux clients. "
               },
               {
                 message: "Après un ensemble de réunions au bouts desquelles je leur ai présenté le design du site web et les interfaces utilisateurs de la solution que je proposais, nous sommes tombés d'accord. Étant donné qu'elle ne possedait pas d'ancienne solution , j'ai dû tout créer de rien y compris le logo."
@@ -251,12 +217,14 @@ export class ProjectsService {
                 message: "achat du nom de domaine"
               },
               {
+                message: "création du logo"
+              },
+              {
                 message: "création d'adresses mails professionnelles"
               },
               {
                 message: "présentation des services de l'entreprise via des design de qualité"
               },
-              
               {
                 message: "création de différents formulaires d'accès aux services (Réservation de billet d'avions, hôtel, appartements meublé, location voiture, expédition DHL, ...) "
               },
@@ -264,14 +232,14 @@ export class ProjectsService {
                 message: "présentation des services proposés par des entreprises partenanires"
               },
               {
-                message: "création d'une partie administrateur sécurisée destinée à la gestion du site web"
+                message: "création d'une partie administrateur sécurisée destinée à la gestion et mise à jour du site web ( gestion de tourisme, gestion des hébergements (appartements meublés et hôtels), dashboard de l'activité de l'entreprise, ..."
               },
               
               {
                 message: "optimisation du SEO"
               },
               {
-                message: "intégration google analytics"
+                message: "intégration de fonctionnalités de suivi du parcours utilisateurs sur le site"
               },
               {
                 message: "Intégration d'une adaptation de prix suivant les dévises"
@@ -285,73 +253,222 @@ export class ProjectsService {
               
             ],
 
+            estate: "terminé",
+
+            technologies:[
+
+
+              {
+                name: "Angular 12",
+                image: "../../../assets/img/logos/angular_logo.png"
+              },
+              {
+                name: "Prime ng",
+                image: "../../../assets/img/logos/primeng_logo.png"
+              },
+              {
+                name: "Sass",
+                image: "../../../assets/img/logos/scss_logo.png"
+              },
+              {
+                name: "Node js",
+                image: "../../../assets/img/logos/node_logo.png"
+              },
+              {
+                name: "Express js",
+                image: "../../../assets/img/logos/express_logo.png"
+              },
+              {
+                name: "MongoDB",
+                image: "../../../assets/img/logos/mongodb_logo.png"
+              },
+              {
+                name: "JWT",
+                image: "../../../assets/img/logos/json_web_token_logo.png"
+              },
+              {
+                name: "Amadeus API",
+                image: "../../../assets/img/logos/amadeus.png"
+              },
+              {
+                name: "Microanalytics.io",
+                image: "../../../assets/img/logos/microanalytics.png"
+              },
+              {
+                name: "o2switch",
+                image: "../../../assets/img/logos/o2switch_logo.png"
+              },
+              {
+                name: "Adobe XD",
+                image: "../../../assets/img/logos/adobe_logo.png"
+              },
+              {
+                name: "Github",
+                image: "../../../assets/img/logos/github.png"
+              }
+            ]
+          
+      },
+      {
+        code: "fecabasketcampain",
+            image: "../../../assets/img/projects/yves-tsala-devices.png",
+            link:"https://root.yvestsala2022.com",
+            who:[
+              {
+                message:"Le directeur de campagne du candidat Yves Tsala, candidat aux éléctions 2022 pour la présidence de la Fédération camerounaise de basket-ball ( FECABASKET )  m'a contacté pour un besoin de création, suivi et maintient du site web de campagne de son candidat."
+              }
+            ],
+            why:[
+              {
+                message: "Le besoin manifesté a été de créer un outil de communication de qualité permettant de présenter sa vision et son projet pour le basketball camerounais. "
+              }
+            ],
+            requirement_intro:"Les exigences de ce projet sont les suivantes: ",
+            requirements:[
+              {
+                message: "réaliser les maquettes du site web permettant au candidat de se présenter, présenter son QG de campagne, sa vision et son projet de la façon la plus optimale possible"
+              },
+              {
+                message: "rendre le site web consultable sur tous types de devices"
+              },
+              {
+                message: "créer des bouttons de partage avec un contenu pré-construit à destination des différents réseaux sociaux"
+              },
+              {
+                message: "rediriger les utilisateurs vers les plateformes de réceptions de dons créées pour soutenir la campagne"
+              },
+              {
+                message: "créer une partie administrateur sécurisée qui permet de mettre à jour le calendrier d'évènements de campagne visible sur le site web"
+              }
+            ],
+
+            estate: "terminé",
+
+            technologies:[
+              {
+                name: "Angular 13",
+                image: "../../../assets/img/logos/angular_logo.png"
+              },
+              {
+                name: "Prime ng",
+                image: "../../../assets/img/logos/primeng_logo.png"
+              },
+              {
+                name: "Node js",
+                image: "../../../assets/img/logos/node_logo.png"
+              },
+              {
+                name: "Express js",
+                image: "../../../assets/img/logos/express_logo.png"
+              },
+              {
+                name: "MongoDB Atlas",
+                image: "../../../assets/img/logos/mongodb_logo.png"
+              }
+              ,
+              {
+                name: "passport js",
+                image: "../../../assets/img/logos/passportjs.png"
+              },
+              {
+                name: "o2switch",
+                image: "../../../assets/img/logos/o2switch_logo.png"
+              },
+              {
+                name: "Adobe XD",
+                image: "../../../assets/img/logos/adobe_logo.png"
+              },
+              {
+                name: "Github",
+                image: "../../../assets/img/logos/github.png"
+              }
+            ]
+      },
+      {
+        code: "foryoumedias",
+            image: "../../../assets/img/projects/foryou-media-afrique-logo.png",
+            link:"",
+            who:[
+              {
+                message:"<b>For You Media Africa</b> est une chaîne de télévision et de radio panafricaine basée au Cameroun à Douala.</b>"
+              }
+            ],
+            why:[
+              {
+                message: "La chaine possédait déjà un premier site web mais ce dernier ne répondait plus à ses exigences. Aussi, la chaine a souhaité rajouter de nouvelles fonctionnalités mais il s'est posé de nombreux problèmes d'implémentation provenant du mauvais choix de technologies. Après une analyse de l'existant, j'ai proposé des maquettes qui ont été validées et ensuite s'est suivi la phase de réalisation."
+              }
+            ],
+            requirement_intro:"Les exigences de ce projet sont les suivantes: ",
+            requirements:[
+              {
+                message: "achat du nouveau nom de domaine"
+              },
+              {
+                message: "création d'adresses mails professionnelles"
+              },
+              {
+                message: "design des maquettes et développement"
+              },
+              {
+                message: "implémentation de la réception de dons à l'endroit de la chaine. Dons reçu par paypal et virements bancaires"
+              },
+              {
+                message: "création d'une partie administrateur sécurisée qui permet de gérer et de mettre à jour l'application web à destination du publique ( céation et mise à jour des types d'émissions, programmes, replay ... )"
+              },
+              {
+                message: "mise en production de la partie admin et publique"
+              },
+              {
+                message: "maintenance et rajout de fonctionnalités"
+              }
+            ],
+
             estate: "en cours",
 
             technologies:[
               {
-                name: "Angular 12",
-                image: "../../../assets/img/logos/angular_logo.png",
-                alt:"angular logo"
+                name: "Angular 13",
+                image: "../../../assets/img/logos/angular_logo.png"
               },
               {
                 name: "Prime ng",
-                image: "../../../assets/img/logos/primeng_logo.png",
-                alt:"prime ng logo"
-              },
-              {
-                name: "Sass",
-                image: "../../../assets/img/logos/scss.png",
-                alt:"sass logo"
+                image: "../../../assets/img/logos/primeng_logo.png"
               },
               {
                 name: "Node js",
-                image: "../../../assets/img/logos/node_logo.png",
-                alt:"node js logo"
+                image: "../../../assets/img/logos/node_logo.png"
               },
               {
                 name: "Express js",
-                image: "../../../assets/img/logos/express_logo.png",
-                alt:"express logo"
+                image: "../../../assets/img/logos/express_logo.png"
               },
               {
                 name: "MongoDB",
-                image: "../../../assets/img/logos/mongodb_logo.png",
-                alt:"mongoDB logo"
+                image: "../../../assets/img/logos/mongodb_logo.png"
+              }
+              ,
+              {
+                name: "passport js",
+                image: "../../../assets/img/logos/passportjs.png"
               },
               {
-                name: "ionos",
-                image: "../../../assets/img/logos/ionos_logo.pn",
-                alt:"ionos logo"
+                name: "Google Analytics",
+                image: "../../../assets/img/logos/google_analytics_logo.png"
               },
               {
-                name: "JWT",
-                image: "../../../assets/img/logos/json_web_token_logo.png",
-                alt:"jwt logo"
-              },
-              {
-                name: "Heroku",
-                image: "",
-                alt:"angular logo"
+                name: "o2switch",
+                image: "../../../assets/img/logos/o2switch_logo.png"
               },
               {
                 name: "Adobe XD",
-                image: "../../../assets/img/logos/adobe_xd.png",
-                alt:"adobe logo"
+                image: "../../../assets/img/logos/adobe_logo.png"
               },
               {
                 name: "Github",
-                image: "../../../assets/img/logos/",
-                alt:"github logo"
-              },
-              {
-                name: "Google Anlystics",
-                image: "../../../assets/img/logos/google_analytics_logo.png",
-                alt:"google anlystics logo"
+                image: "../../../assets/img/logos/github.png"
               }
-            ],
-          
+            ]
       }
-
     ]
   }
 

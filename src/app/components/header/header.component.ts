@@ -36,8 +36,8 @@ export class HeaderComponent implements OnInit {
   
   isBurgerMenuClicked: boolean = false;
 
-
   currentLinkNumber = 1;
+
   currentAnchorTag ="accueil";
 
   constructor(
@@ -46,8 +46,6 @@ export class HeaderComponent implements OnInit {
     { }
 
   ngOnInit(): void {
-    
-    this.redirectOnLoad();
   }
 
   //Handling click on burger menu
@@ -78,7 +76,6 @@ export class HeaderComponent implements OnInit {
 
     }
   }
-
 
   //Handling navigation on scroll
 
@@ -127,50 +124,6 @@ export class HeaderComponent implements OnInit {
         }
       }
 
-
-//Redirect to the good link on load so that this link will be activated
-   redirectOnLoad(){
-
-    this.router.events.pipe(first()).subscribe( event => {
-      if(event instanceof NavigationEnd){
-
-     var nav = this.router.url
-
-     if(nav == "/#a-propos"){
-       this.currentLinkNumber = 2;
-       this.currentAnchorTag = "a-propos"
-     }
- 
-     else if(nav == "/#commandez"){
-       this.currentLinkNumber = 3;
-       this.currentAnchorTag = "commandez"
-     }
- 
-     else if(nav == "/#carte"){
-       this.currentLinkNumber = 4;
-       this.currentAnchorTag = "carte"
-     }
- 
-     else if(nav == "/#temoignages"){
-       this.currentLinkNumber = 5;
-       this.currentAnchorTag = "temoignages"
-     }
- 
-     else if(nav == "/#contact"){
-       this.currentLinkNumber = 6;
-       this.currentAnchorTag = "contact"
-     }
-
-
-   }
-   this.setActiveLinkAndNavigate(this.currentLinkNumber, this.currentAnchorTag);
-
-  }
-
-  )   
- }
-
-
 //Setting the link 
 //Toggle screen menu when on small devices 
   setActiveLinkAndNavigate(linkNumber: number, targetAnchor: string){
@@ -212,8 +165,5 @@ export class HeaderComponent implements OnInit {
 
     this.router.navigate([], { fragment: targetAnchor });
   }
-
-
-
 
 }

@@ -33,7 +33,7 @@
             </div>
                 
 
-                <button (click)="goOnSscovidWebsite(project.link)">Visitez le site</button>
+                <button *ngIf="project.estate == 'terminé'" (click)="goOnSscovidWebsite(project.link)">Visitez le site</button>
 
         </div>    
 
@@ -41,42 +41,15 @@
         <div class="technos-bloc">
             <span class="title">Technologies utilisées</span>
 
-
             <div class="technos">
-                <div class="techno">
-                    <img src="../../../assets/img/logos/angular_logo.png" alt="angular logo">
-                    <span>Angular 11</span>
-                </div>
-                <div class="techno">
-                    <img src="../../../assets/img/logos/node_logo.png" alt="node js logo">
-                    <span>Node js</span>
-                </div>
-                <div class="techno">
-                    <img src="../../../assets/img/logos/express_logo.png" alt="express logo">
-                    <span>Express js</span>
-                </div>
-                <div class="techno">
-                    <img src="../../../assets/img/logos/postgres_logo.png" alt="postgresql logo">
-                    <span>PostgreSQL</span>
-                </div>
-                <div class="techno">
-                    <img src="../../../assets/img/logos/amcharts_logo.png" alt="amchartlogo">
-                    <span>AmCharts</span>
-                </div>
-
-                <div class="techno">
-                    <img src="../../../assets/img/logos/google_analytics_logo.png" alt="google analytics logo">
-                    <span>Google Analytics</span>
-                </div>
-                <div class="techno">
-                    <img src="../../../assets/img/logos/heroku_logo.png" alt="heroku logo">
-                    <span>Heroku</span>
-                </div>
-                <div class="techno">
-                    <img src="../../../assets/img/logos/hostinger_logo.png" alt="angular-logo">
-                    <span>Hostinger</span>
-                </div>
+                <ng-template ngFor let-technology [ngForOf]="project.technologies" >
+                    <div class="techno">
+                        <img src={{technology.image}} alt={{technology.name}}>
+                        <span>{{technology.name}}</span>
+                    </div>
+                </ng-template>
             </div>
+
         </div>
     </div>
 

@@ -32,6 +32,7 @@ $background: #f3f3f3;
     background-color: $background;
     color: $colorBlue;
     padding-top: 50px;
+    padding-bottom: 40px;
 
     .content{
         width: 100%;
@@ -50,7 +51,6 @@ $background: #f3f3f3;
 
             img{
                 width: 300px;
-                height: 180px;
                 margin-bottom: 30px;
             }
 
@@ -77,9 +77,8 @@ $background: #f3f3f3;
                 margin-top: 5px;
 
                 ul{
-                    margin: 15px 0 0 20px;
+                    padding: 15px 0 0 20px;
                     list-style-position: inside;
-                    position: relative;
                     width: 100%;
                 }
             }
@@ -143,8 +142,8 @@ $background: #f3f3f3;
                     flex-direction: column;
 
                     & img{
-                        width: 80px;
-                        height: 80px;
+                        width: 50px;
+                        height: 50px;
                     }
 
                 }
@@ -155,30 +154,11 @@ $background: #f3f3f3;
 }
 
 
-
-@media all and (max-width: 1012px){
-    .sscovid{
-        margin: 0 0 0 100px;
-        width: calc(100vw - 100px);
-    }
-}
-
-
-@media all and (max-width: 689px){
-    .sscovid{
-        .content{
-            padding: 0 23px;
-        }
-    }
-
-}
-
 @media all and (max-width: 675px){
-    .sscovid{
-        margin: 0 0 0 60px;
-        width: calc(100vw - 60px);
-
+    .project{
         .content{
+
+            padding: 0 23px;
 
             .back-button{
                 padding: 2px 15px;
@@ -188,8 +168,7 @@ $background: #f3f3f3;
             .description{
 
                 img{
-                    width:200px;
-                    height: 120px;
+                    width:250px;
                 }
 
                 button{
