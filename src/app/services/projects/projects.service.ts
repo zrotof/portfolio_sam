@@ -138,7 +138,7 @@ export class ProjectsService {
       {
         code: "restaurant",
             image: "../../../assets/img/projects/restaurant-responsive.png",
-            link:"https://casabreizh.herokuapp.com",
+            link:"https://restaurant.sm-digitalizer.fr",
             who:[
               {
                 message:"Je me suis proposé de réaliser un système complet de gestion de site web de restaurant."
